@@ -25,7 +25,7 @@
               Imaginez un monde où chaque clic, chaque scroll, raconte une histoire. En tant que
               développeur full stack, je ne crée pas seulement des lignes de code, je construis des
               expériences numériques captivantes et immersives. Prêt à transformer vos idées en
-              réalité interactive ?
+              réalité interactives ?
             </p>
             <div class=" mt-14">
               <div class="mt-10 sm:mt-8 sm:flex justify-start">
