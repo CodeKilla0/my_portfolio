@@ -12,7 +12,7 @@
               <span class="font-extrabold" >Aziz Diomande</span>
               <br />
             </h2>
-            <h1 class="lg:text-5xl mt-3 text-3xl font-extrabold text-gray-900" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">Full Stack Developper</h1>
+            <h1 class="lg:text-5xl text-gray-900 mt-3 text-3xl font-extrabold" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">Full Stack Developper</h1>
             <h2
               class="lg:text-4xl mt-3 text-2xl font-normal text-gray-900 sm:text-5xl sm:leading-none md:text-3xl" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500"
             >

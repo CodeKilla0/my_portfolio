@@ -66,24 +66,61 @@
             </li>
             <li>
               <a
-                href="#"
+                href="#projects"
                 class="block py-2 px-3 font-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >My projects</a
               >
             </li>
+            <li>
+              <a
+                  href="#"
+                  class="block py-2 px-3 font-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                Blog
+              </a>
+            </li>
           </ul>
         </div>
       </div>
+    <div class="header">
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
     </nav>
   </header>
 </template>
 
-<script setup></script>
+<script setup>
+
+function progressBarScroll() {
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+      height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
+      scrolled = (winScroll / height) * 100;
+  document.getElementById("progressBar").style.width = scrolled + "%";
+}
+
+window.onscroll = function () {
+  progressBarScroll();
+};
+
+</script>
 
 <style>
 
 .nav{
     clear: both;
+}
+
+.progress-container {
+  background-color: rgba(150, 150, 150, 0.6);
+  height: 3px;
+  width: 100%;
+}
+
+.progress-bar {
+  background-color: #000;
+  height: 3px;
+  width: 0%;
 }
 
 </style>
