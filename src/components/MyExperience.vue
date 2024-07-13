@@ -8,7 +8,7 @@
                     <span class="font-extrabold">Experience</span>
                 </h2>
             </div>
-            <div class="border-2 border-gray-400 p-7 mx-10 mb-10" data-aos="fade-up" data-aos-anchor-placement="bottom-center">
+            <div class="border-2 border-gray-400 p-7 mx-10 mb-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-content-between pb-6">
                     <div class="logo flex">
                         <img src="" alt="">
@@ -29,7 +29,7 @@
                     </p>
                 </div>
             </div>
-            <div class="border-2 bg-slate-900 text-white p-7 mx-10 mb-10" data-aos="fade-up" data-aos-anchor-placement="bottom-center">
+            <div class="border-2 bg-black text-white p-7 mx-10 mb-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-content-between pb-6">
                     <div class="logo flex">
                         <img src="" alt="">
@@ -50,7 +50,7 @@
                     </p>
                 </div>
             </div>
-            <div class="border-2 border-gray-400 p-7 mx-10 mb-10" data-aos="fade-up" data-aos-anchor-placement="bottom-center">
+            <div class="border-2 border-gray-400 p-7 mx-10 mb-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-content-between pb-6">
                     <div class="logo flex">
                         <img src="" alt="">

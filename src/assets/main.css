@@ -75,3 +75,19 @@
   font-weight: 900;
   font-style: italic;
 }
+
+html {
+  cursor: none;
+}
+
+#circularcursor {
+  background-color: transparent;
+  border:5px solid orangered;
+  height:40px;
+  width:40px;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  position: absolute;
+  z-index: 1;
+}

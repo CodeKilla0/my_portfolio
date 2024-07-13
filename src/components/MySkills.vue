@@ -1,5 +1,5 @@
 <template>
-  <div class="skillPage bg-black bg-opacity-95">
+  <div class="skillPage bg-black">
     <div class="title pt-20 mb-20 ">
       <h2 class="text-center text-4xl text-white">
         My
@@ -10,7 +10,7 @@
       class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-6 lg:gap-16 sm:gap-4 max-w-screen-xl mx-auto px-10 pt-20 pb-32"
     >
       <div
-        class="bg-white text-center hover:shadow-2xl rounded-md transition duration-150 ease-in-out" data-aos="flip-up"
+        class="bg-white text-center hover:shadow-2xl rounded-md transition duration-150 ease-in-out"
       >
         <div id="skills" class="py-6">
           <div class="text-5xl text-center font-medium text-gray-900">
@@ -22,7 +22,7 @@
         </div>
       </div>
       <div
-        class="bg-white text-center hover:shadow-2xl rounded-md transition duration-150 ease-in-out" data-aos="flip-up"
+        class="bg-white text-center hover:shadow-2xl rounded-md transition duration-150 ease-in-out"
       >
         <div class="py-6">
           <div class="text-5xl text-center font-medium text-gray-900">
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div
-        class="bg-white text-center hover:shadow-2xl rounded-md transition duration-150 ease-in-out" data-aos="flip-up"
+        class="bg-white text-center hover:shadow-2xl rounded-md transition duration-150 ease-in-out"
       >
         <div class="py-6">
           <div class="text-5xl text-center font-medium text-gray-900">
@@ -46,7 +46,7 @@
         </div>
       </div>
       <div
-        class="bg-white text-center hover:shadow-2xl rounded-md transition duration-150 ease-in-out" data-aos="flip-up"
+        class="bg-white text-center hover:shadow-2xl rounded-md transition duration-150 ease-in-out"
       >
         <div class="py-6">
           <div class="text-5xl text-center font-medium text-gray-900">
@@ -58,7 +58,7 @@
         </div>
       </div>
       <div
-        class="bg-white text-center hover:shadow-2xl rounded-md transition duration-150 ease-in-out" data-aos="flip-up"
+        class="bg-white text-center hover:shadow-2xl rounded-md transition duration-150 ease-in-out"
       >
         <div class="py-6">
           <div class="text-5xl text-center font-medium text-gray-900">
@@ -70,7 +70,7 @@
         </div>
       </div>
       <div
-        class="bg-white text-center hover:shadow-2xl rounded-md transition duration-150 ease-in-out" data-aos="flip-up"
+        class="bg-white text-center hover:shadow-2xl rounded-md transition duration-150 ease-in-out"
       >
         <div class="py-6">
           <div class="text-5xl text-center font-medium text-gray-900">
@@ -82,7 +82,7 @@
         </div>
       </div>
       <div
-        class="bg-white text-center hover:shadow-2xl rounded-md transition duration-150 ease-in-out" data-aos="flip-up"
+        class="bg-white text-center hover:shadow-2xl rounded-md transition duration-150 ease-in-out"
       >
         <div class="py-6">
           <div class="text-5xl text-center font-medium text-gray-900">
@@ -94,7 +94,7 @@
         </div>
       </div>
       <div
-        class="bg-white text-center hover:shadow-2xl rounded-md transition duration-150 ease-in-out" data-aos="flip-up"
+        class="bg-white text-center hover:shadow-2xl rounded-md transition duration-150 ease-in-out"
       >
         <div class="py-6">
           <div class="text-5xl text-center font-medium text-gray-900">
