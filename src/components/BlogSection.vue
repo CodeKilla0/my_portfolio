@@ -1,157 +1,34 @@
 <template>
-<section class="bg-white dark:bg-gray-900">
-<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-  <div class="title text-black mb-20">
-    <h2 class="text-center text-4xl">
-      My
-      <span class="font-extrabold">Blog</span>
-    </h2>
+  <div class="bg-black">
+    <div class="container mx-auto py-16 max-w-screen-xl">
+        <!-- Titre de la section -->
+        <h2 class="text-5xl font-bold text-white mb-8 text-center police">Mon Blog</h2>
+        <h1 class="text-9xl font-black text-center mb-8 text-slate-300 text-opacity-20 title">Blog</h1>
+
+        <!-- Grille des articles de blog -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Article 1 -->
+            <div class="bg-black">
+                <img src="https://via.placeholder.com/400x300" alt="Article Image 1" class="rounded-lg mb-4">
+                <p class="text-yellow-500 text-sm mb-2">Juin 21, 2019 <span class="mx-2">|</span> ADMIN <span class="mx-2">|</span> 3</p>
+                <h2 class="text-2xl font-semibold mb-2">Pourquoi la génération de leads est essentielle pour la croissance des entreprises</h2>
+                <p class="text-gray-400">Une petite rivière nommée Duden coule par leur place et leur fournit les régalia nécessaires.</p>
+            </div>
+            <!-- Article 2 -->
+            <div class="bg-black">
+                <img src="https://via.placeholder.com/400x300" alt="Article Image 2" class="rounded-lg mb-4">
+                <p class="text-yellow-500 text-sm mb-2">Juin 21, 2019 <span class="mx-2">|</span> ADMIN <span class="mx-2">|</span> 3</p>
+                <h2 class="text-2xl font-semibold mb-2">Pourquoi la génération de leads est essentielle pour la croissance des entreprises</h2>
+                <p class="text-gray-400">Une petite rivière nommée Duden coule par leur place et leur fournit les régalia nécessaires.</p>
+            </div>
+            <!-- Article 3 -->
+            <div class="bg-black">
+                <img src="https://via.placeholder.com/400x300" alt="Article Image 3" class="rounded-lg mb-4">
+                <p class="text-yellow-500 text-sm mb-2">Juin 21, 2019 <span class="mx-2">|</span> ADMIN <span class="mx-2">|</span> 3</p>
+                <h2 class="text-2xl font-semibold mb-2">Pourquoi la génération de leads est essentielle pour la croissance des entreprises</h2>
+                <p class="text-gray-400">Une petite rivière nommée Duden coule par leur place et leur fournit les régalia nécessaires.</p>
+            </div>
+        </div>
+    </div>
   </div>
-  <div class="grid gap-8 lg:grid-cols-2">
-    <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <div class="flex justify-between items-center mb-5 text-gray-500">
-        <span
-          class="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
-          <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20"
-               xmlns="http://www.w3.org/2000/svg"><path
-            d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
-          Tutorial
-        </span>
-        <span class="text-sm">14 days ago</span>
-      </div>
-      <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><a href="#">How to quickly deploy
-        a static website</a></h2>
-      <p class="mb-5 font-normal text-gray-500 dark:text-gray-400">Static websites are now used to bootstrap lots of
-        websites and are becoming the basis for a variety of tools that even influence both web designers and developers
-        influence both web designers and developers.</p>
-      <div class="flex justify-between items-center">
-        <div class="flex items-center space-x-4">
-          <img alt="Jese Leos avatar"
-               class="w-7 h-7 rounded-full"
-               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"/>
-          <span class="font-medium dark:text-white">
-                          Jese Leos
-                      </span>
-        </div>
-        <a class="inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline" href="#">
-          Read more
-          <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  fill-rule="evenodd"></path>
-          </svg>
-        </a>
-      </div>
-    </article>
-    <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <div class="flex justify-between items-center mb-5 text-gray-500">
-        <span
-            class="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
-            <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20"
-               xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd"
-               d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z"
-               fill-rule="evenodd"></path><path
-               d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path></svg>
-            Article
-        </span>
-        <span class="text-sm">14 days ago</span>
-      </div>
-      <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><a href="#">Our first project
-        with React</a></h2>
-      <p class="mb-5 font-normal text-gray-500 dark:text-gray-400">Static websites are now used to bootstrap lots of
-        websites and are becoming the basis for a variety of tools that even influence both web designers and developers
-        influence both web designers and developers.</p>
-      <div class="flex justify-between items-center">
-        <div class="flex items-center space-x-4">
-          <img alt="Bonnie Green avatar"
-               class="w-7 h-7 rounded-full"
-               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"/>
-          <span class="font-medium dark:text-white">
-                          Bonnie Green
-                      </span>
-        </div>
-        <a class="inline-flex items-center font-medium text-blue-600 dark:text-primary-500 hover:underline" href="#">
-          Read more
-          <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  fill-rule="evenodd"></path>
-          </svg>
-        </a>
-      </div>
-    </article><article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <div class="flex justify-between items-center mb-5 text-gray-500">
-        <span
-          class="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
-          <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20"
-               xmlns="http://www.w3.org/2000/svg"><path
-            d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
-          Tutorial
-        </span>
-        <span class="text-sm">14 days ago</span>
-      </div>
-      <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><a href="#">How to quickly deploy
-        a static website</a></h2>
-      <p class="mb-5 font-normal text-gray-500 dark:text-gray-400">Static websites are now used to bootstrap lots of
-        websites and are becoming the basis for a variety of tools that even influence both web designers and developers
-        influence both web designers and developers.</p>
-      <div class="flex justify-between items-center">
-        <div class="flex items-center space-x-4">
-          <img alt="Jese Leos avatar"
-               class="w-7 h-7 rounded-full"
-               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"/>
-          <span class="font-medium dark:text-white">
-                          Jese Leos
-                      </span>
-        </div>
-        <a class="inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline" href="#">
-          Read more
-          <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  fill-rule="evenodd"></path>
-          </svg>
-        </a>
-      </div>
-    </article>
-    <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <div class="flex justify-between items-center mb-5 text-gray-500">
-        <span
-            class="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
-            <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20"
-               xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd"
-               d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z"
-               fill-rule="evenodd"></path><path
-               d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path></svg>
-            Article
-        </span>
-        <span class="text-sm">14 days ago</span>
-      </div>
-      <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><a href="#">Our first project
-        with React</a></h2>
-      <p class="mb-5 font-normal text-gray-500 dark:text-gray-400">Static websites are now used to bootstrap lots of
-        websites and are becoming the basis for a variety of tools that even influence both web designers and developers
-        influence both web designers and developers.</p>
-      <div class="flex justify-between items-center">
-        <div class="flex items-center space-x-4">
-          <img alt="Bonnie Green avatar"
-               class="w-7 h-7 rounded-full"
-               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"/>
-          <span class="font-medium dark:text-white">
-                          Bonnie Green
-                      </span>
-        </div>
-        <a class="inline-flex items-center font-medium text-blue-600 dark:text-primary-500 hover:underline" href="#">
-          Read more
-          <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  fill-rule="evenodd"></path>
-          </svg>
-        </a>
-      </div>
-    </article>
-  </div>
-</div>
-</section>
 </template>

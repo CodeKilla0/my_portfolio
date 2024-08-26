@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import BlogPage from "@/views/BlogPage.vue";
+import TimeToGame from '@/views/TimeToGame.vue';
 import AOS from "aos";
 import 'aos/dist/aos.css';
 
@@ -24,6 +25,11 @@ const router = createRouter({
       path: '/blog',
       name: 'blog',
       component: BlogPage
+    },
+    {
+      path: '/snake-game',
+      name: 'snake-game',
+      component: TimeToGame
     },
   ]
 });
