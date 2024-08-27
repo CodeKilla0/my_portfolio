@@ -175,7 +175,7 @@
           data-aos-easing="linear"
         >
           <img
-            src="../assets/images/logo/luxGabon.jpg"
+            src="../assets/images/logo/luxgabon.jpg"
             alt="photo01"
             class="rounded-3xl"
           />
