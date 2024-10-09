@@ -92,7 +92,11 @@
           data-aos-duration="1500"
           data-aos-easing="linear"
         >
-          <img src="../assets/images/Frame19.png" alt="photo01" />
+          <img
+            src="../assets/images/trello.jpg"
+            alt="photo01"
+            class="rounded-3xl"
+          />
         </div>
       </div>
 
@@ -181,13 +185,66 @@
           />
         </div>
       </div>
+
+      <!-- 5e -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 max-w-screen-xl mx-auto text-white lg:mb-28 mb-16"
+      >
+        <div
+          class="image lg:px-0 px-6 rounded-xl"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-easing="linear"
+        >
+          <img
+            src="../assets/images/gospel.jpg"
+            alt="photo01"
+            class="rounded-3xl"
+          />
+        </div>
+
+        <div
+          class="container p-10 flex flex-col align-text-bottom"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-easing="linear"
+        >
+          <div class="text-[#0FEFB4] number text-6xl font-bold mb-10 police">
+            05
+          </div>
+          <div class="text-3xl font-bold mb-10">Projets - IGospel Magazine</div>
+          <div class="content mb-8">
+            My Shop est un projet e-commerce développé en utilisant Laravel pour
+            une solution full stack complète. Ce projet intègre des
+            fonctionnalités robustes pour la gestion des produits, des commandes
+            et des utilisateurs, offrant ainsi une expérience de shopping en
+            ligne fluide et sécurisée.
+          </div>
+          <div class="flex text-3xl font-bold">
+            <a
+              href="https://genius.lux-gabon.com/#"
+              target="_blank"
+              class="pr-6 hover:text-[#0FEFB4]"
+            >
+              <font-awesome-icon
+                icon="fa-solid fa-arrow-up-right-from-square"
+              />
+              <span class="text-2xl"> Liens </span>
+            </a>
+            <a href="https://genius.lux-gabon.com/#" target="_blank" class="hover:text-[#0FEFB4]">
+              <font-awesome-icon
+                icon="fa-solid fa-arrow-up-right-from-square"
+              />
+              <span class="text-2xl"> Maquette </span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
-<style>
-
-</style>
+<style></style>
 <script>
 export default {
   mounted() {
