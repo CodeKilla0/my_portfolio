@@ -31,7 +31,7 @@
           data-aos-easing="linear"
         >
           <div class="pb-10">
-            <h3 class="text-white text-3xl text-rih font-bold">Message</h3>
+            <h3 class="text-white text-3xl text-rih font-bold">Écrivez-moi !</h3>
           </div>
 
           <form @submit.prevent="sendEmail">
@@ -288,7 +288,7 @@ export default {
     border-width: 2px;
   }
   50% {
-    border-color: rgb(118, 242, 143);
+    border-color: rgb(82, 195, 104);
     border-width: 2px;
   }
   75% {

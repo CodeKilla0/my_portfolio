@@ -5,6 +5,10 @@
     <div class="controls">
       <button @click="startGame">Start</button>
       <button @click="pauseGame">Pause</button>
+      <button>
+      
+      <router-link to="/">Home</router-link>
+      </button>
     </div>
     <div class="score">Score: {{ score }}</div>
   </div>

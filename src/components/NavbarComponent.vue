@@ -24,7 +24,7 @@ import MySkills from '@/components/MySkills.vue';
         <div
           class="flex md:order-2 lg:space-x-3 md:space-x-0 rtl:space-x-reverse"
         >
-          <a href="../assets/images/CV_aziz_diomande.pdf" download="">
+          <a href="../assets/images/CV_aziz_diomande.pdf" download="" class="hidden md:block lg:block xl:block 2xl:block">
             <button
               class="font-black h-[45px] w-40 overflow-hidden bg-black text-white transition-all before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500 after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500 hover:text-black hover:before:w-2/4 hover:before:bg-[#0FEFB4] hover:after:w-2/4 hover:after:bg-[#0FEFB4]"
             >
