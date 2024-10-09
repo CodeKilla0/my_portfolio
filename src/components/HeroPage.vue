@@ -12,7 +12,7 @@
             <h2
               class="lg:text-4xl  sm:text-2xl font-normal text-gray-900 text-2xl sm:leading-none md:text-3xl"
             >
-              Hello ! I'm
+              Hello ! Je suis
               <span class="font-extrabold">Aziz Diomande</span>
               <br />
             </h2>
@@ -24,7 +24,7 @@
             <h2
               class="lg:text-4xl mt-3 text-2xl font-normal text-gray-900 sm:text-5xl sm:leading-none md:text-3xl"
             >
-              Based in
+              Basé à
               <span class="font-extrabold">Abidjan</span>
             </h2>
             <!-- <p
