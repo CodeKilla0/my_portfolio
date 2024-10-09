@@ -27,7 +27,7 @@
           <h3 class="text-2xl text-white font-bold mb-4">Web & Graphic designer</h3>
           <p class="text-gray-300 uppercase mb-6">Kacou Oi & Co</p>
           <p class="text-gray-500">
-            Au sein d'une équipe constituée d'un chef de projet web, de développeurs, de Graphique 
+            Au sein d'une équipe constituée d'un chef de projet web, de développeurs,
             Designer UI & UX, j'ai réalisé de nombreuses missions sur des projets 
             clients dans le secteur du digital
           </p>
@@ -39,7 +39,7 @@
           <p class="text-gray-500">
             Encadré par des ingénieurs et intégrateurs FullStack au sein de l’éauipe technique, 
             j’ai réalisé des missions d’amélioration de compétence technique en matière 
-            de conception de site web et d’application web
+            de conception de site web et d’application web.
           </p>
         </div>
         <div class="bg-neutral-100 bg-opacity-10 p-8 rounded-lg" data-aos="fade-up" data-aos-duration="2000">

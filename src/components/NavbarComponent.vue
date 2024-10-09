@@ -65,13 +65,6 @@ import MySkills from '@/components/MySkills.vue';
           >
             <li>
               <a
-                href="#"
-                class="block py-2 px-3 font-medium text-gray-900 rounded hover:first-letter:font-black hover:first-letter:bg-emerald-200 hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
                 href="#resumes"
                 class="block py-2 px-3 font-medium text-gray-900 rounded hover:first-letter:font-black hover:first-letter:bg-emerald-200 hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >Resumes</a
@@ -96,7 +89,7 @@ import MySkills from '@/components/MySkills.vue';
             <li>
               <router-link
                 to="/snake-game"
-                class="block py-2 px-3 font-medium text-gray-900 rounded hover:first-letter:font-black hover:first-letter:bg-emerald-200 hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block py-3 px-4 bg-amber-300 font-medium text-gray-900 rounded hover:first-letter:font-black hover:first-letter:bg-emerald-200 hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Snake Game
               </router-link>

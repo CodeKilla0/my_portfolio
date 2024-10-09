@@ -13,7 +13,7 @@
           <button
             class="relative font-black h-[45px] w-40 overflow-hidden bg-black text-white transition-all before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500 after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500 hover:text-black hover:before:w-2/4 hover:before:bg-emerald-400 hover:after:w-2/4 hover:after:bg-emerald-400"
           >
-            <span class="relative z-10">Ecrivez moi</span>
+            <a href="#contact" class="relative z-10">Ecrivez moi</a>
           </button>
         </div>
       </div>

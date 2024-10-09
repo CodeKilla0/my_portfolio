@@ -15,9 +15,10 @@
         <h2 class="text-6xl font-bold text-black mb-8 police" data-aos="fade-right" data-aos-duration="2000">Aziz Ismaël</h2>
         <h1 class="text-8xl font-black text-start text-zinc-700 text-opacity-20 title" data-aos="fade-left" data-aos-duration="1000">DIOMANDE</h1>
         <p class="text-xl font-semibold mb-3 w-100 pr-10">
-            Développeur web et graphiste avec plus de 2 ans d'expérience dans la 
-            conception web et graphique. Passionné par les nouvelles technologies 
-            et la résolution de problèmes tech.
+          Développeur Full Stack junior et UX/UI designer, passionné par 
+          l'innovation technologique, je suis à la recherche de nouveaux 
+          défis pour approfondir et mettre en pratique mes compétences 
+          en développement web et mobile.
         </p>
         <div class="mb-4 text-lg">
           <p class="mb-1">

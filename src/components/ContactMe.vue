@@ -1,5 +1,5 @@
 <template>
-  <div class="contact bg-black">
+  <div class="contact bg-black" id="contact">
     <div class="container mx-auto bg-black text-white py-12 max-w-screen-xl">
       <!-- Contact Information -->
       <h2 class="text-5xl font-bold text-white mb-8 text-center police">
