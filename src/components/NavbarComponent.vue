@@ -7,8 +7,8 @@ import MySkills from '@/components/MySkills.vue';
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-5"
       >
-        <router-link
-          to="/"
+        <a
+          href="#"
           class="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img
@@ -20,7 +20,7 @@ import MySkills from '@/components/MySkills.vue';
             class="self-center text-lg font-extrabold whitespace-nowrap text-gray-900"
             >Aziz Diomande</span
           >
-        </router-link>
+        </a>
         <div
           class="flex md:order-2 lg:space-x-3 md:space-x-0 rtl:space-x-reverse"
         >
