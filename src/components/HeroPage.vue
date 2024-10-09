@@ -5,10 +5,10 @@
       class="grid grid-flow-col grid-rows-2 z-20 sm:grid-rows-1 sm:grid-cols-2 max-w-screen-xl items-center overflow-auto mx-auto pt-10"
     >
       <div
-        class="flex items-center lg:justify-start sm:justify-center justify-center lg:order-first lg:h-[700px]"
+        class="element flex items-center lg:justify-start sm:justify-center justify-center lg:order-first lg:h-[700px]"
       >
         <main class="pt-14">
-          <div class="text-left md:ml-8 sm:ml-4 ml-4 lg:ml-0" data-aos="zoom-in" data-aos-duration="1000" >
+          <div class="text-left md:ml-16 sm:ml-4 ml-4 lg:ml-0" data-aos="zoom-in" data-aos-duration="1000" >
             <h2
               class="lg:text-4xl  sm:text-2xl font-normal text-gray-900 text-2xl sm:leading-none md:text-3xl"
             >
@@ -156,14 +156,18 @@
  }
 }
 
-/* media query tablet screen */
-
-@media (max-width: 992px ) {
+@media (max-width: 1023px ) {
  .heroBack{
   background-image: none;
   }
   .image_phone{
     display: block;
+  }
+  .cote{
+    padding-left: 15px
+  }
+  .element{
+    min-height: 400px;
   }
 }
 
