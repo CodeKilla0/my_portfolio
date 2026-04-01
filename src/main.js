@@ -77,3 +77,8 @@ app.use(Particles, {
   });
 
 app.mount("#app");
+AOS.init({
+  duration: 800,
+  once: true,
+  offset: 40,
+});

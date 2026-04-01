@@ -1,18 +1,22 @@
 <template>
-  <div class="contact bg-black" id="contact">
-    <div class="container mx-auto bg-black text-white py-12 max-w-screen-xl">
+  <div class="contact relative overflow-hidden bg-zinc-100/95 dark:bg-zinc-950/50" id="contact">
+    <div
+      class="pointer-events-none absolute inset-0 bg-mesh-light opacity-30 dark:bg-mesh-dark dark:opacity-35"
+      aria-hidden="true"
+    />
+    <div class="relative container mx-auto max-w-screen-xl bg-transparent py-12 text-zinc-900 dark:text-white">
       <!-- Contact Information -->
-      <h2 class="text-5xl font-bold text-white mb-8 text-center police">
+      <h2 class="police mb-8 text-center text-5xl font-bold">
         Contactez moi
       </h2>
       <h1
-        class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-center mb-8 text-slate-300 text-opacity-20 title"
+        class="title mb-8 text-center text-5xl font-black text-zinc-200/80 sm:text-7xl md:text-8xl lg:text-9xl dark:text-slate-300 dark:text-opacity-20"
       >
         Contact
       </h1>
     </div>
 
-    <div class="bg-black pb-32">
+    <div class="relative bg-transparent pb-32">
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
         <!-- Image Section -->
         <div class="w-full md:w-1/2 flex justify-center">
@@ -25,13 +29,13 @@
         </div>
         <!-- Contact Form -->
         <div
-          class="w-full md:w-1/2 mt-8 md:mt-0 bg-neutral-100 bg-opacity-10 p-8 rounded-lg shadow-lg animated-border m-13 lg:px-8 md:px-12"
+          class="animated-border m-13 mt-8 w-full rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/95 p-8 shadow-soft-xl shadow-inner-highlight backdrop-blur-sm md:mt-0 md:w-1/2 md:px-12 lg:px-8 dark:border-white/10 dark:bg-gradient-to-br dark:from-zinc-900/90 dark:via-zinc-950 dark:to-[#0a0a0f] dark:shadow-inner-highlight-dark dark:shadow-glow-mint-sm"
           data-aos="fade-up"
           data-aos-duration="1500"
           data-aos-easing="linear"
         >
           <div class="pb-10">
-            <h3 class="text-white text-3xl text-rih font-bold">Écrivez-moi !</h3>
+            <h3 class="text-3xl font-bold text-zinc-900 dark:text-white">Écrivez-moi !</h3>
           </div>
 
           <form @submit.prevent="sendEmail">
@@ -42,7 +46,7 @@
                 v-model="form.name"
                 required
                 placeholder="Votre nom"
-                class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                class="w-full rounded-xl border border-zinc-200/90 bg-white/90 p-3 text-zinc-900 shadow-inner placeholder:text-zinc-400 transition focus:border-[#0FEFB4]/50 focus:outline-none focus:ring-2 focus:ring-[#0FEFB4]/30 dark:border-zinc-600/80 dark:bg-zinc-900/80 dark:text-white dark:placeholder:text-zinc-500 dark:focus:ring-[#0FEFB4]/25"
               />
             </div>
             <div class="mb-3">
@@ -52,7 +56,7 @@
                 v-model="form.numero"
                 required
                 placeholder="Votre numero"
-                class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                class="w-full rounded-xl border border-zinc-200/90 bg-white/90 p-3 text-zinc-900 shadow-inner placeholder:text-zinc-400 transition focus:border-[#0FEFB4]/50 focus:outline-none focus:ring-2 focus:ring-[#0FEFB4]/30 dark:border-zinc-600/80 dark:bg-zinc-900/80 dark:text-white dark:placeholder:text-zinc-500 dark:focus:ring-[#0FEFB4]/25"
               />
             </div>
             <div class="mb-3">
@@ -62,7 +66,7 @@
                 v-model="form.email"
                 required
                 placeholder="Votre email"
-                class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                class="w-full rounded-xl border border-zinc-200/90 bg-white/90 p-3 text-zinc-900 shadow-inner placeholder:text-zinc-400 transition focus:border-[#0FEFB4]/50 focus:outline-none focus:ring-2 focus:ring-[#0FEFB4]/30 dark:border-zinc-600/80 dark:bg-zinc-900/80 dark:text-white dark:placeholder:text-zinc-500 dark:focus:ring-[#0FEFB4]/25"
               />
             </div>
             <div class="mb-3">
@@ -72,7 +76,7 @@
                 v-model="form.subject"
                 placeholder="Objet"
                 required
-                class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                class="w-full rounded-xl border border-zinc-200/90 bg-white/90 p-3 text-zinc-900 shadow-inner placeholder:text-zinc-400 transition focus:border-[#0FEFB4]/50 focus:outline-none focus:ring-2 focus:ring-[#0FEFB4]/30 dark:border-zinc-600/80 dark:bg-zinc-900/80 dark:text-white dark:placeholder:text-zinc-500 dark:focus:ring-[#0FEFB4]/25"
               />
             </div>
             <div class="mb-3">
@@ -81,12 +85,12 @@
                 v-model="form.message"
                 placeholder="Message"
                 required
-                class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                class="w-full rounded-xl border border-zinc-200/90 bg-white/90 p-3 text-zinc-900 shadow-inner placeholder:text-zinc-400 transition focus:border-[#0FEFB4]/50 focus:outline-none focus:ring-2 focus:ring-[#0FEFB4]/30 dark:border-zinc-600/80 dark:bg-zinc-900/80 dark:text-white dark:placeholder:text-zinc-500 dark:focus:ring-[#0FEFB4]/25"
               ></textarea>
             </div>
             <div class="mt-3">
               <button
-                class="relative font-black h-[45px] w-full overflow-hidden bg-black text-white transition-all before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500 after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500 hover:text-black hover:before:w-2/4 hover:before:bg-emerald-400 hover:after:w-2/4 hover:after:bg-emerald-400"
+                class="relative h-[45px] w-full overflow-hidden rounded-xl bg-gradient-to-r from-zinc-800 to-zinc-900 font-black text-white shadow-soft-lg transition-all before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500 after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500 hover:text-black hover:before:w-2/4 hover:before:bg-emerald-400 hover:after:w-2/4 hover:after:bg-emerald-400 dark:from-black dark:to-zinc-950 dark:shadow-glow-mint-sm"
                 type="submit"
               >
                 <span class="relative z-10">Envoyer</span>

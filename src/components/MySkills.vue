@@ -1,37 +1,41 @@
 <template>
-  <div class="skillPage bg-black pb-36" id="resumes">
+  <div class="skillPage relative overflow-hidden bg-zinc-100/90 pb-36 backdrop-blur-[1px] dark:bg-zinc-950/35 dark:backdrop-blur-sm" id="resumes">
     <div id="tsparticles"></div>
-    <div class="container mx-auto py-16 max-w-screen-xl">
-      <h2 class="text-5xl font-bold text-white mb-8 text-center police">
+    <div
+      class="pointer-events-none absolute inset-0 bg-mesh-light opacity-25 dark:bg-mesh-dark dark:opacity-30"
+      aria-hidden="true"
+    />
+    <div class="relative container mx-auto py-16 max-w-screen-xl">
+      <h2 class="police mb-8 text-center text-5xl font-bold text-zinc-900 dark:text-white">
         Resume
       </h2>
       <h1
-        class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-center text-slate-300 text-opacity-20 title"
+        class="title text-center text-5xl font-black text-zinc-200/70 sm:text-7xl md:text-8xl lg:text-9xl dark:text-slate-300 dark:text-opacity-20"
       >
         Resume
       </h1>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div
-          class="bg-neutral-100 p-8 bg-opacity-10 rounded-lg"
+          class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/98 p-8 shadow-soft-lg shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-900/92 dark:via-zinc-950 dark:to-[#0a0a0f] dark:shadow-inner-highlight-dark dark:shadow-glow-mint-sm"
           data-aos="fade-up"
           data-aos-duration="1500"
         >
           <h2 class="text-[#0FEFB4] text-xl font-bold">
             De Avril 2024 à Septembre 2024
           </h2>
-          <h3 class="text-2xl text-white font-bold mb-4">
+          <h3 class="mb-4 text-2xl font-bold text-zinc-900 dark:text-white">
             Formation Développeur Full Stack Junior
           </h3>
-          <p class="text-gray-300 uppercase mb-6">Coding Academy by Epitech</p>
-          <p class="text-gray-500">
+          <p class="mb-6 uppercase text-zinc-600 dark:text-gray-300">Coding Academy by Epitech</p>
+          <p class="text-zinc-600 dark:text-gray-500">
             Coding Academy by Epitech - Cohorte Full Stack Developer.
           </p>
           <ul
-            class="space-y-1 text-gray-500 list-inside dark:text-gray-400 mt-5"
+            class="mt-5 list-inside space-y-1 text-zinc-600 dark:text-gray-400"
           >
             <li class="">
-              <div class="flex font-medium text-gray-300">
+              <div class="flex font-medium text-zinc-800 dark:text-gray-300">
                 <svg
                   class="w-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
                   aria-hidden="true"
@@ -46,7 +50,7 @@
                 Langages de programmation appris :
               </div>
               <ul
-                class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400 pl-5"
+                class="list-inside list-disc space-y-1 pl-5 text-zinc-600 dark:text-gray-400"
               >
                 <li>
                   Front-end : VueJS, ReactJS, HTML/CSS, Bootstrap, Tailwind,
@@ -59,7 +63,7 @@
               </ul>
             </li>
             <li class="">
-              <div class="flex font-medium text-gray-300">
+              <div class="flex font-medium text-zinc-800 dark:text-gray-300">
                 <svg
                   class="w-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
                   aria-hidden="true"
@@ -74,7 +78,7 @@
                 Compétences développées :
               </div>
               <ul
-                class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400 pl-5"
+                class="list-inside list-disc space-y-1 pl-5 text-zinc-600 dark:text-gray-400"
               >
                 <li>
                   Développement web front-end et back-end, intégration de bases
@@ -86,27 +90,27 @@
           </ul>
         </div>
         <div
-          class="bg-neutral-100 p-8 bg-opacity-10 rounded-lg"
+          class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/98 p-8 shadow-soft-lg shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-900/92 dark:via-zinc-950 dark:to-[#0a0a0f] dark:shadow-inner-highlight-dark dark:shadow-glow-mint-sm"
           data-aos="fade-up"
           data-aos-duration="1500"
         >
           <h2 class="text-[#0FEFB4] text-xl font-bold">
             De Juin 2023 à Avril 2024
           </h2>
-          <h3 class="text-2xl text-white font-bold mb-4">
+          <h3 class="mb-4 text-2xl font-bold text-zinc-900 dark:text-white">
             Web & Graphic designer
           </h3>
-          <p class="text-gray-300 uppercase mb-6">Kacou Oi & Co</p>
-          <p class="text-gray-400 text-justify">
+          <p class="mb-6 uppercase text-zinc-600 dark:text-gray-300">Kacou Oi & Co</p>
+          <p class="text-justify text-zinc-600 dark:text-gray-400">
             En tant que web et graphic designer (UX/UI) chez Kakou Oi & Co,
             j'étais responsable de la conception visuelle et du développement
             d'interfaces web. Mon rôle comprenait :
           </p>
           <ul
-            class="space-y-1 text-gray-500 list-inside dark:text-gray-400 mt-5"
+            class="mt-5 list-inside space-y-1 text-zinc-600 dark:text-gray-400"
           >
             <li class="">
-              <div class="flex font-medium text-gray-300">
+              <div class="flex font-medium text-zinc-800 dark:text-gray-300">
                 <svg
                   class="w-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
                   aria-hidden="true"
@@ -121,7 +125,7 @@
                 Conception graphique :
               </div>
               <ul
-                class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400 pl-5"
+                class="list-inside list-disc space-y-1 pl-5 text-zinc-600 dark:text-gray-400"
               >
                 <li>
                   Création de designs attractifs et fonctionnels pour les sites
@@ -138,7 +142,7 @@
               </ul>
             </li>
             <li class="">
-              <div class="flex font-medium text-gray-300">
+              <div class="flex font-medium text-zinc-800 dark:text-gray-300">
                 <svg
                   class="w-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
                   aria-hidden="true"
@@ -153,7 +157,7 @@
                 Développement web :
               </div>
               <ul
-                class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400 pl-5"
+                class="list-inside list-disc space-y-1 pl-5 text-zinc-600 dark:text-gray-400"
               >
                 <li>
                   Développement d'interfaces web interactives et réactives.
@@ -169,7 +173,7 @@
               </ul>
             </li>
             <li class="">
-              <div class="flex font-medium text-gray-300">
+              <div class="flex font-medium text-zinc-800 dark:text-gray-300">
                 <svg
                   class="w-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
                   aria-hidden="true"
@@ -184,7 +188,7 @@
                 Collaboration et coordination :
               </div>
               <ul
-                class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400 pl-5"
+                class="list-inside list-disc space-y-1 pl-5 text-zinc-600 dark:text-gray-400"
               >
                 <li>
                   Collaboration avec les équipes techniques pour une intégration
@@ -199,25 +203,25 @@
           </ul>
         </div>
         <div
-          class="bg-neutral-100 bg-opacity-10 p-8 rounded-lg"
+          class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/98 p-8 shadow-soft-lg shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-900/92 dark:via-zinc-950 dark:to-[#0a0a0f] dark:shadow-inner-highlight-dark dark:shadow-glow-mint-sm"
           data-aos="fade-up"
           data-aos-duration="2000"
         >
           <h2 class="text-[#0FEFB4] text-xl font-bold">
             De Mai 2022 à Juin 2023
           </h2>
-          <h3 class="text-2xl text-white font-bold mb-4">
+          <h3 class="mb-4 text-2xl font-bold text-zinc-900 dark:text-white">
             Stagiaire Business Support
           </h3>
-          <p class="text-gray-300 uppercase mb-6">Synergie Technologie Group</p>
-          <p class="text-gray-400 text-justify">
+          <p class="mb-6 uppercase text-zinc-600 dark:text-gray-300">Synergie Technologie Group</p>
+          <p class="text-justify text-zinc-600 dark:text-gray-400">
             Durant mon stage, j'ai acquis une expérience pratique en
             développement web et design graphique, sous la supervision
             d’ingénieurs et de développeurs Full Stack. Mes principales
             responsabilités incluaient :
           </p>
           <ul
-            class="space-y-1 text-gray-500 list-inside dark:text-gray-400 mt-5"
+            class="mt-5 list-inside space-y-1 text-zinc-600 dark:text-gray-400"
           >
             <li class="flex">
               <svg
@@ -285,21 +289,21 @@
           </ul>
         </div>
         <div
-          class="bg-neutral-100 bg-opacity-10 p-8 rounded-lg"
+          class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/98 p-8 shadow-soft-lg shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-900/92 dark:via-zinc-950 dark:to-[#0a0a0f] dark:shadow-inner-highlight-dark dark:shadow-glow-mint-sm"
           data-aos="fade-up"
           data-aos-duration="2000"
         >
           <h2 class="text-[#0FEFB4] text-xl font-bold">2021–2023</h2>
-          <h3 class="text-2xl text-white font-bold mb-4">Infographiste</h3>
-          <p class="text-gray-300 uppercase mb-6">ZybPrime</p>
-          <p class="text-gray-400 text-justify">
+          <h3 class="mb-4 text-2xl font-bold text-zinc-900 dark:text-white">Infographiste</h3>
+          <p class="mb-6 uppercase text-zinc-600 dark:text-gray-300">ZybPrime</p>
+          <p class="text-justify text-zinc-600 dark:text-gray-400">
             En tant qu'infographiste chez Zybprime, spécialisé dans la
             confection de t-shirts personnalisés, j'étais responsable de la
             réalisation des maquettes graphiques basées sur les propositions de
             nos clients. Mon travail consistait à :
           </p>
           <ul
-            class="space-y-1 text-gray-500 list-inside dark:text-gray-400 mt-5"
+            class="mt-5 list-inside space-y-1 text-zinc-600 dark:text-gray-400"
           >
             <li class="flex items-center">
               <svg

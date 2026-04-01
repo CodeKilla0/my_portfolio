@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { nextTick } from 'vue'
 import HomeView from '../views/HomeView.vue'
 import BlogPage from "@/views/BlogPage.vue";
 import TimeToGame from '@/views/TimeToGame.vue';
@@ -34,9 +35,10 @@ const router = createRouter({
   ]
 });
 
-router.beforeEach((to, from, next) => {
-  AOS.init(); // Initialize AOS
-  next();
+router.afterEach(() => {
+  nextTick(() => {
+    AOS.refreshHard();
+  });
 });
 
 export default router

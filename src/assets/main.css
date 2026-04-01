@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .text-gradient-mint {
+    @apply bg-gradient-to-r from-[#0FEFB4] to-[#2dffc4] bg-clip-text text-transparent;
+  }
+}
+
 .roboto-thin {
   font-family: "Roboto", sans-serif;
   font-weight: 100;

@@ -1,12 +1,16 @@
 <template>
-  <div class=" bg-black pb-36" id="services">
-    <div class="container mx-auto py-16 max-w-screen-xl">
+  <div class="relative overflow-hidden bg-zinc-100/90 pb-36 backdrop-blur-[1px] dark:bg-zinc-950/40" id="services">
+    <div
+      class="pointer-events-none absolute inset-0 bg-mesh-light opacity-20 dark:bg-mesh-dark dark:opacity-25"
+      aria-hidden="true"
+    />
+    <div class="relative container mx-auto py-16 max-w-screen-xl">
       <!-- Services Title -->
-      <h2 class="text-5xl font-bold text-white mb-8 text-center police">
+      <h2 class="police mb-8 text-center text-5xl font-bold text-zinc-900 dark:text-white">
         Services
       </h2>
       <h1
-        class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-center text-slate-300 text-opacity-20 title"
+        class="title text-center text-5xl font-black text-zinc-200/70 sm:text-7xl md:text-8xl lg:text-9xl dark:text-slate-300 dark:text-opacity-20"
       >
         Services
       </h1>
@@ -15,69 +19,69 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Service Item -->
         <div
-          class="bg-gray-100 bg-opacity-5 hover:bg-emerald-400 transition-all duration-300 ease-in-out flex flex-col justify-center text-center rounded-lg h-[250px] servieHover"
+          class="servieHover flex h-[250px] flex-col justify-center rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white to-zinc-50 text-center shadow-soft backdrop-blur-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-emerald-300/60 hover:bg-emerald-400 hover:shadow-soft-lg dark:border-white/[0.08] dark:bg-gradient-to-br dark:from-zinc-900/85 dark:to-zinc-950 dark:shadow-inner-highlight-dark dark:hover:shadow-glow-mint-sm"
           data-aos="fade-up" data-aos-duration="2000"
         >
           <div class="mb-4 text-emerald-400 text-5xl">
             <!-- Replace with your icon -->
             <font-awesome-icon icon="fa-solid fa-crop" />
           </div>
-          <h3 class="text-xl text-white font-bold mb-2">WEB DESIGN</h3>
+          <h3 class="mb-2 text-xl font-bold text-zinc-900 dark:text-white">WEB DESIGN</h3>
           <hr class="border-emerald-500 w-12 mx-auto" />
         </div>
         <div
-          class="bg-gray-100 bg-opacity-5 hover:bg-emerald-400 transition-all duration-300 ease-in-out flex flex-col justify-center text-center rounded-lg h-[250px] servieHover"
+          class="servieHover flex h-[250px] flex-col justify-center rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white to-zinc-50 text-center shadow-soft backdrop-blur-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-emerald-300/60 hover:bg-emerald-400 hover:shadow-soft-lg dark:border-white/[0.08] dark:bg-gradient-to-br dark:from-zinc-900/85 dark:to-zinc-950 dark:shadow-inner-highlight-dark dark:hover:shadow-glow-mint-sm"
           data-aos="fade-up" data-aos-duration="2000"
         >
           <div class="mb-4 text-emerald-400 text-5xl">
             <!-- Replace with your icon -->
             <font-awesome-icon icon="fa-solid fa-mobile-button" />
           </div>
-          <h3 class="text-xl text-white font-bold mb-2">APP DEVELOPING</h3>
+          <h3 class="mb-2 text-xl font-bold text-zinc-900 dark:text-white">APP DEVELOPING</h3>
           <hr class="border-emerald-500 w-12 mx-auto" />
         </div>
         <div
-          class="bg-gray-100 bg-opacity-5 hover:bg-emerald-400 transition-all duration-300 ease-in-out flex flex-col justify-center text-center rounded-lg h-[250px] servieHover"
+          class="servieHover flex h-[250px] flex-col justify-center rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white to-zinc-50 text-center shadow-soft backdrop-blur-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-emerald-300/60 hover:bg-emerald-400 hover:shadow-soft-lg dark:border-white/[0.08] dark:bg-gradient-to-br dark:from-zinc-900/85 dark:to-zinc-950 dark:shadow-inner-highlight-dark dark:hover:shadow-glow-mint-sm"
           data-aos="fade-up" data-aos-duration="2000"
         >
           <div class="mb-4 text-emerald-400 text-5xl">
             <!-- Replace with your icon -->
             <font-awesome-icon icon="fa-solid fa-laptop" />
           </div>
-          <h3 class="text-xl text-white font-bold mb-2">WEB DEVELOPPER</h3>
+          <h3 class="mb-2 text-xl font-bold text-zinc-900 dark:text-white">WEB DEVELOPPER</h3>
           <hr class="border-emerald-500 w-12 mx-auto" />
         </div>
         <div
-          class="bg-gray-100 bg-opacity-5 hover:bg-emerald-400 transition-all duration-300 ease-in-out flex flex-col justify-center text-center rounded-lg h-[250px] servieHover"
+          class="servieHover flex h-[250px] flex-col justify-center rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white to-zinc-50 text-center shadow-soft backdrop-blur-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-emerald-300/60 hover:bg-emerald-400 hover:shadow-soft-lg dark:border-white/[0.08] dark:bg-gradient-to-br dark:from-zinc-900/85 dark:to-zinc-950 dark:shadow-inner-highlight-dark dark:hover:shadow-glow-mint-sm"
           data-aos="fade-up" data-aos-duration="2000"
         >
           <div class="mb-4 text-emerald-400 text-5xl">
             <!-- Replace with your icon -->
             <font-awesome-icon icon="fa-solid fa-pen-ruler" />
           </div>
-          <h3 class="text-xl text-white font-bold mb-2">UI/UX CONSULTING</h3>
+          <h3 class="mb-2 text-xl font-bold text-zinc-900 dark:text-white">UI/UX CONSULTING</h3>
           <hr class="border-emerald-500 w-12 mx-auto" />
         </div>
         <div
-          class="bg-gray-100 bg-opacity-5 hover:bg-emerald-400 transition-all duration-300 ease-in-out flex flex-col justify-center text-center rounded-lg h-[250px] servieHover"
+          class="servieHover flex h-[250px] flex-col justify-center rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white to-zinc-50 text-center shadow-soft backdrop-blur-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-emerald-300/60 hover:bg-emerald-400 hover:shadow-soft-lg dark:border-white/[0.08] dark:bg-gradient-to-br dark:from-zinc-900/85 dark:to-zinc-950 dark:shadow-inner-highlight-dark dark:hover:shadow-glow-mint-sm"
           data-aos="fade-up" data-aos-duration="2000"
         >
           <div class="mb-4 text-emerald-400 text-5xl">
             <!-- Replace with your icon -->
             <font-awesome-icon icon="fa-solid fa-diagram-project" />
           </div>
-          <h3 class="text-xl text-white font-bold mb-2">DIGITAL PROJECT</h3>
+          <h3 class="mb-2 text-xl font-bold text-zinc-900 dark:text-white">DIGITAL PROJECT</h3>
           <hr class="border-emerald-500 w-12 mx-auto" />
         </div>
         <div
-          class="bg-gray-100 bg-opacity-5 hover:bg-emerald-400 transition-all duration-300 ease-in-out flex flex-col justify-center text-center rounded-lg h-[250px] servieHover"
+          class="servieHover flex h-[250px] flex-col justify-center rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white to-zinc-50 text-center shadow-soft backdrop-blur-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-emerald-300/60 hover:bg-emerald-400 hover:shadow-soft-lg dark:border-white/[0.08] dark:bg-gradient-to-br dark:from-zinc-900/85 dark:to-zinc-950 dark:shadow-inner-highlight-dark dark:hover:shadow-glow-mint-sm"
           data-aos="fade-up" data-aos-duration="2000"
         >
           <div class="mb-4 text-emerald-400 text-5xl">
             <!-- Replace with your icon -->
             <font-awesome-icon icon="fa-solid fa-crop" />
           </div>
-          <h3 class="text-xl text-white font-bold mb-2">WEB DESIGN</h3>
+          <h3 class="mb-2 text-xl font-bold text-zinc-900 dark:text-white">WEB DESIGN</h3>
           <hr class="border-emerald-500 w-12 mx-auto" />
         </div>
       </div>

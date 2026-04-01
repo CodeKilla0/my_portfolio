@@ -1,105 +1,150 @@
-import MySkills from '@/components/MySkills.vue';
 <template>
   <header class="nav">
     <nav
-      class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 cursor-auto"
+      class="fixed start-0 top-0 z-50 w-full border-b border-zinc-200/70 bg-white/72 shadow-nav backdrop-blur-xl ring-1 ring-white/50 dark:border-white/[0.07] dark:bg-zinc-950/72 dark:shadow-nav-dark dark:ring-white/[0.05]"
     >
       <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-5"
+        class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between gap-2 py-4"
       >
         <a
-          href="#"
+          href="/#"
           class="flex items-center space-x-3 rtl:space-x-reverse"
+          @click="menuOpen = false"
         >
           <img
             src="../assets/images/logo/logo-03.png"
-            class="h-12 rotating-logo"
-            alt="Flowbite Logo"
+            class="h-10 w-10 rounded-full object-cover ring-2 ring-[#0FEFB4]/30 transition hover:ring-[#0FEFB4]/60 md:h-11 md:w-11"
+            alt="Logo Aziz Diomande"
           />
           <span
-            class="self-center text-lg font-extrabold whitespace-nowrap text-gray-900"
+            class="font-display self-center text-base font-bold tracking-tight text-zinc-900 dark:text-white md:text-lg"
             >Aziz Diomande</span
           >
         </a>
         <div
-          class="flex md:order-2 lg:space-x-3 md:space-x-0 rtl:space-x-reverse"
+          class="flex items-center md:order-2 md:space-x-3 rtl:space-x-reverse"
         >
-          <a href="../assets/images/CV_aziz_diomande.pdf" download="" class="hidden md:block lg:block xl:block 2xl:block">
+          <a
+            href="/CV_aziz_diomande.pdf"
+            download="CV_Aziz_Diomande.pdf"
+            class="relative hidden md:block"
+            title="Fichier public/CV_aziz_diomande.pdf"
+          >
             <button
-              class="font-black h-[45px] w-40 overflow-hidden bg-black text-white transition-all before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500 after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500 hover:text-black hover:before:w-2/4 hover:before:bg-[#0FEFB4] hover:after:w-2/4 hover:after:bg-[#0FEFB4]"
+              type="button"
+              class="relative isolate h-10 overflow-hidden rounded-full border border-[#0FEFB4]/45 bg-gradient-to-br from-[#0FEFB4]/15 to-white/40 px-5 text-xs font-bold uppercase tracking-wide text-emerald-800 shadow-soft transition hover:border-[#0FEFB4] hover:from-[#0FEFB4] hover:to-[#34ffc9] hover:text-neutral-950 hover:shadow-glow-mint-sm dark:from-[#0FEFB4]/20 dark:to-transparent dark:text-[#0FEFB4] dark:hover:text-neutral-950"
             >
-              <span class="relative z-10">Download CV</span>
+              <span class="relative z-10">CV</span>
             </button>
           </a>
           <button
-            data-collapse-toggle="navbar-sticky"
             type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-sticky"
-            aria-expanded="false"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 dark:text-neutral-400 dark:hover:bg-white/5 dark:hover:text-white md:hidden"
+            aria-controls="navbar-main"
+            :aria-expanded="menuOpen"
+            @click="menuOpen = !menuOpen"
           >
-            <span class="sr-only">Open main menu</span>
+            <span class="sr-only">Menu</span>
             <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
+              v-if="!menuOpen"
+              class="h-6 w-6"
               fill="none"
-              viewBox="0 0 17 14"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
             >
               <path
-                stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              v-else
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
               />
             </svg>
           </button>
         </div>
         <div
-          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-          id="navbar-sticky"
+          id="navbar-main"
+          class="w-full items-center justify-between md:order-1 md:flex md:w-auto"
+          :class="menuOpen ? 'flex' : 'hidden md:flex'"
         >
           <ul
-            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            class="mt-4 flex w-full flex-col gap-1 rounded-2xl border border-zinc-200/90 bg-white/90 p-3 font-medium shadow-soft md:mt-0 md:flex-row md:gap-2 md:border-0 md:bg-transparent md:p-0 md:shadow-none dark:border-white/10 dark:bg-zinc-900/95 dark:shadow-glow-mint-sm md:dark:bg-transparent md:dark:shadow-none"
           >
             <li>
               <a
+                href="#projects"
+                class="block rounded-xl bg-gradient-to-br from-[#0FEFB4]/20 to-[#0FEFB4]/10 px-4 py-2.5 text-sm font-semibold text-emerald-800 shadow-soft dark:from-[#0FEFB4]/25 dark:to-[#0FEFB4]/10 dark:text-[#0FEFB4] md:bg-gradient-to-br md:from-[#5efecd] md:via-[#0FEFB4] md:to-[#0bc49a] md:text-neutral-950 md:shadow-glow-mint-sm"
+                @click="menuOpen = false"
+              >
+                Projets
+              </a>
+            </li>
+            <li>
+              <a
                 href="#resumes"
-                class="block py-2 px-3 font-medium text-gray-900 rounded hover:first-letter:font-black hover:first-letter:bg-emerald-200 hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >Resumes</a
+                class="block rounded-lg px-4 py-2.5 text-sm text-zinc-700 transition hover:bg-zinc-100 hover:text-zinc-900 md:py-2 dark:text-neutral-300 dark:hover:bg-white/5 dark:hover:text-white"
+                @click="menuOpen = false"
+                >Parcours</a
               >
             </li>
             <li>
               <a
                 href="#services"
-                class="block py-2 px-3 font-medium text-gray-900 rounded hover:first-letter:font-black hover:first-letter:bg-emerald-200 hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block rounded-lg px-4 py-2.5 text-sm text-zinc-700 transition hover:bg-zinc-100 hover:text-zinc-900 md:py-2 dark:text-neutral-300 dark:hover:bg-white/5 dark:hover:text-white"
+                @click="menuOpen = false"
               >
                 Services
               </a>
             </li>
             <li>
               <a
-                href="#projects"
-                class="block py-2 px-3 font-medium text-gray-900 rounded hover:first-letter:font-black hover:first-letter:bg-emerald-200 hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                href="#contact"
+                class="block rounded-lg px-4 py-2.5 text-sm text-zinc-700 transition hover:bg-zinc-100 hover:text-zinc-900 md:py-2 dark:text-neutral-300 dark:hover:bg-white/5 dark:hover:text-white"
+                @click="menuOpen = false"
               >
-                Projects
+                Contact
               </a>
             </li>
             <li>
               <router-link
                 to="/snake-game"
-                class="block py-3 px-4 bg-amber-300 font-medium text-gray-900 rounded hover:first-letter:font-black hover:first-letter:bg-emerald-200 hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block rounded-lg px-4 py-2.5 text-sm text-amber-300/90 transition hover:bg-amber-400/10 hover:text-amber-200 md:py-2"
+                @click="menuOpen = false"
               >
                 Snake Game
               </router-link>
+            </li>
+            <li class="md:hidden">
+              <a
+                href="/CV_aziz_diomande.pdf"
+                download="CV_Aziz_Diomande.pdf"
+                class="block rounded-lg border border-zinc-200 px-4 py-2.5 text-center text-sm text-[#0FEFB4] dark:border-white/10"
+                @click="menuOpen = false"
+              >
+                Télécharger CV
+              </a>
             </li>
           </ul>
         </div>
       </div>
       <div class="header">
         <div class="progress-container">
-          <div class="progress-bar" id="progressBar"></div>
+          <div id="progressBar" class="progress-bar"></div>
         </div>
       </div>
     </nav>
@@ -107,47 +152,53 @@ import MySkills from '@/components/MySkills.vue';
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
+
+const menuOpen = ref(false);
+
 function progressBarScroll() {
-  let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
-    height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight,
-    scrolled = (winScroll / height) * 100;
-  document.getElementById("progressBar").style.width = scrolled + "%";
+  const bar = document.getElementById("progressBar");
+  if (!bar) return;
+  const winScroll =
+    document.body.scrollTop || document.documentElement.scrollTop;
+  const height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+  bar.style.width = scrolled + "%";
 }
 
-window.onscroll = function () {
+onMounted(() => {
+  window.addEventListener("scroll", progressBarScroll, { passive: true });
   progressBarScroll();
-};
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", progressBarScroll);
+});
 </script>
 
-<style>
-.nav {
-  clear: both;
-}
-
+<style scoped>
 .progress-container {
-  background-color: rgba(150, 150, 150, 0.6);
-  height: 3px;
+  background-color: rgba(0, 0, 0, 0.08);
+  height: 2px;
   width: 100%;
 }
 
+@media (prefers-color-scheme: dark) {
+  .progress-container {
+    background-color: rgba(255, 255, 255, 0.06);
+  }
+}
+
 .progress-bar {
-  background: #050504;
-  height: 3px;
+  background: linear-gradient(90deg, #0fefb4, #2dffc4);
+  height: 2px;
   width: 0%;
+  transition: width 0.1s ease-out;
 }
 
-.rotating-logo {
-  animation: spin 4s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.nav {
+  clear: both;
 }
 </style>

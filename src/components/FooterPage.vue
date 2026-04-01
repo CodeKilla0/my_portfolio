@@ -1,46 +1,34 @@
 <template>
-  <div class="footer bg-black border-t-2 border-t-white">
+  <footer
+    class="border-t border-zinc-200/80 bg-gradient-to-b from-zinc-100 to-zinc-200/50 text-zinc-600 shadow-[0_-8px_32px_-12px_rgba(15,23,42,0.06)] dark:border-white/[0.07] dark:from-zinc-950 dark:to-[#030305] dark:text-neutral-400 dark:shadow-[0_-12px_40px_-8px_rgba(0,0,0,0.45)]"
+  >
     <div
-      class="container text-white max-w-screen-xl flex flex-wrap items-center mx-auto lg:px-6"
+      class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between gap-4 px-4 py-8"
     >
-      <div class="content-left flex items-center py-6">
-        <div class="mr-3">
-          <img
-            src="../assets/images/logo/logo-05.png"
-            alt="logo"
-            width="50"
-            class="rotating-logo"
-          />
-        </div>
-        <div>
-          <p class="text-[#0FEFB4]">
-            @<span id="current-year"></span> - powered by Aziz DIOMANDE
-          </p>
-        </div>
+      <div class="flex items-center gap-3">
+        <img
+          src="../assets/images/logo/logo-05.png"
+          alt=""
+          width="40"
+          height="40"
+          class="rounded-lg opacity-90"
+        />
+        <p class="text-sm">
+          <span class="text-[#0FEFB4]">© {{ year }}</span>
+          — Aziz Diomande
+        </p>
       </div>
+      <p class="text-xs text-zinc-500 dark:text-neutral-600">Portfolio · Full stack</p>
     </div>
-  </div>
+  </footer>
 </template>
 
-<style scoped>
-.rotating-logo {
-  animation: spin 4s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-</style>
-
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const currentYear = new Date().getFullYear();
-  const yearElement = document.getElementById("current-year");
-  yearElement.textContent = currentYear;
-});
+export default {
+  data() {
+    return {
+      year: new Date().getFullYear(),
+    };
+  },
+};
 </script>
