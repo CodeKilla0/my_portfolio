@@ -30,7 +30,7 @@
           class="mt-4 text-base leading-relaxed text-zinc-600 dark:text-neutral-400 md:text-lg"
         >
           Le moyen le plus simple pour un brief rapide, un devis ou une question
-          technique : un message direct, sans formulaire ni boîte mail bloquée.
+          technique : un message direct, écrivez-moi sur WhatsApp.
         </p>
       </header>
 
