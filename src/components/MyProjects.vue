@@ -153,6 +153,13 @@
                 />
                 Ouvrir le site
               </a>
+              <router-link
+                :to="`/projects/${project.id}`"
+                class="inline-flex items-center gap-2 rounded-full border border-zinc-300 bg-white/55 px-6 py-3 text-sm font-semibold text-zinc-900 shadow-soft transition hover:border-[#0FEFB4]/45 hover:text-[#0c8f6b] dark:border-white/20 dark:bg-white/[0.04] dark:text-white dark:hover:text-[#0FEFB4]"
+              >
+                <font-awesome-icon icon="fa-solid fa-diagram-project" class="text-sm" />
+                Détails
+              </router-link>
               <span
                 v-else
                 class="inline-flex items-center gap-2 rounded-full border border-dashed border-zinc-300 px-6 py-3 text-sm text-zinc-500 dark:border-white/25 dark:text-neutral-500"
@@ -261,6 +268,13 @@
               <div
                 class="mt-6 flex flex-wrap gap-2 border-t border-zinc-200 pt-5 dark:border-white/[0.06]"
               >
+                <router-link
+                  :to="`/projects/${project.id}`"
+                  class="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-zinc-300 bg-white/50 px-3 py-2.5 text-xs font-semibold text-zinc-800 shadow-soft transition hover:border-[#0FEFB4]/40 hover:text-[#0c8f6b] sm:flex-none sm:px-4 dark:border-white/15 dark:bg-white/[0.04] dark:text-white dark:hover:text-[#0FEFB4]"
+                >
+                  <font-awesome-icon icon="fa-solid fa-diagram-project" class="text-[11px]" />
+                  Détails
+                </router-link>
                 <a
                   v-if="project.liveUrl"
                   :href="project.liveUrl"
@@ -305,150 +319,14 @@
 <script>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { projects as projectsData } from "@/data/projects";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default {
   data() {
     return {
-      projects: [
-        {
-          id: "laundry-saas",
-          category: "Application web SaaS",
-          title: "Laundry Platform — Gestion Pressing",
-          subtitle: "Système multi-tenant de gestion complète",
-          tags: ["Next.js", "Node.js", "PostgreSQL", "Multi-tenant"],
-          description:
-            "Plateforme SaaS de gestion pour pressing : commandes, trésorerie, facturation et suivi techniciens. Architecture multi-tenant avec Next.js, Express et PostgreSQL, pensée pour le marché Afrique de l'Ouest (FCFA).",
-          image: new URL(
-            "../assets/images/laundry-dashboard.png",
-            import.meta.url
-          ).href,
-          imageAlt: "Aperçu du tableau de bord Laundry Platform",
-          liveUrl: null,
-          figmaUrl: null,
-        },
-        {
-          id: "money-center",
-          category: "Application Fintech",
-          title: "Money-Center — Transfert & Retrait",
-          subtitle: "Plateforme multi-opérateurs de transfert d'argent",
-          tags: ["Next.js", "Node.js", "PostgreSQL", "Fintech", "API"],
-          description:
-            "Money-Center centralise les opérations de transfert et retrait d'argent (cash & mobile money) pour un réseau d'agences. Gestion multi-opérateurs (Orange, Wave, MTN…), frais configurables, taux de change système ou API, compensation inter-agences et reporting complet.",
-          image: new URL("../assets/images/money-center.png", import.meta.url)
-            .href,
-          imageAlt: "Aperçu du dashboard Money-Center",
-          liveUrl: null,
-          figmaUrl: null,
-        },
-        {
-          id: "post-it",
-          category: "Application web",
-          title: "Post It — WeCode",
-          subtitle: "Notes collaboratives numériques",
-          tags: ["Vue.js", "API REST", "UI"],
-          description:
-            "Post It numérise le concept de post-it : création, organisation et partage de notes dans une interface claire et réactive, avec un front Vue.js connecté à une API dédiée.",
-          image: new URL("../assets/images/Frame19.png", import.meta.url).href,
-          imageAlt: "Aperçu du projet Post It",
-          liveUrl: "https://post-it-wecode-project.netlify.app/#/",
-          figmaUrl: null,
-        },
-        {
-          id: "trello-clone",
-          category: "Application web",
-          title: "Clone Trello — WeCode",
-          subtitle: "Tableaux et cartes de tâches",
-          tags: ["Vue.js", "WordPress API", "Kanban"],
-          description:
-            "Application de gestion de tâches façon kanban : colonnes, cartes et collaboration, avec Vue.js côté interface et WordPress comme backend pour les données.",
-          image: new URL("../assets/images/trello.jpg", import.meta.url).href,
-          imageAlt: "Aperçu du clone Trello",
-          liveUrl: null,
-          figmaUrl: null,
-        },
-        {
-          id: "my-shop",
-          category: "E-commerce",
-          title: "My Shop — WeCode",
-          subtitle: "Boutique en ligne full stack",
-          tags: ["Laravel", "PHP", "E-commerce"],
-          description:
-            "Plateforme e-commerce avec gestion des produits, commandes et comptes utilisateurs, pensée pour un parcours d’achat fluide et sécurisé.",
-          image: new URL(
-            "../assets/images/logo/ashion.jpg",
-            import.meta.url
-          ).href,
-          imageAlt: "Aperçu du projet My Shop",
-          liveUrl: "https://genius.lux-gabon.com/#",
-          figmaUrl: null,
-        },
-        {
-          id: "lux-gabon",
-          category: "Site institutionnel",
-          title: "Lux Gabon",
-          subtitle: "Site web pour une ONG",
-          tags: ["HTML", "CSS", "JavaScript", "PHP"],
-          description:
-            "Site pour l’ONG Lux Gabon (lien Luxembourg) : présentation des actions, pages structurées et mise en ligne soignée pour renforcer la visibilité de l’organisation.",
-          image: new URL(
-            "../assets/images/logo/luxgabon.jpg",
-            import.meta.url
-          ).href,
-          imageAlt: "Aperçu du site Lux Gabon",
-          liveUrl: null,
-          figmaUrl: null,
-        },
-        {
-          id: "igospel",
-          category: "Média & design",
-          title: "iGospel Magazine",
-          subtitle: "Maquette et site",
-          tags: ["Figma", "Communauté", "Média"],
-          description:
-            "Conception d’une plateforme moderne pour la communauté chrétienne : mise en avant du magazine (foi, inspiration, actualité) avec une navigation intuitive.",
-          image: new URL("../assets/images/gospel.jpg", import.meta.url).href,
-          imageAlt: "Aperçu iGospel Magazine",
-          liveUrl: "https://igospelmagazine.com/",
-          figmaUrl:
-            "https://www.figma.com/proto/9o9QIrhdakOavJcNbR4BBh/I-Gospel-Magazine?t=mwnDloiZdgBiVo6B-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&node-id=2-4&starting-point-node-id=2%3A4",
-        },
-        {
-          id: "val-tech-apple",
-          category: "E-commerce & design",
-          title: "VAL-TECH Apple Store",
-          subtitle: "Vente d’appareils Apple",
-          tags: ["Figma", "E-commerce", "Apple"],
-          description:
-            "Maquette et site orientés catalogue Apple : mise en page épurée, hiérarchie visuelle forte et parcours d’achat lisible sur mobile comme sur desktop.",
-          image: new URL(
-            "../assets/images/val-tech-apple.jpg",
-            import.meta.url
-          ).href,
-          imageAlt: "Aperçu VAL-TECH Apple Store",
-          liveUrl: "https://val-techapplestore.com/",
-          figmaUrl:
-            "https://www.figma.com/proto/NhFF84Oj86KKoMq2r7b3RT/Val-Tech-Apple-Store-2?node-id=64-38&node-type=canvas&t=GkuWgPpRfa7uFaY6-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A2",
-        },
-        {
-          id: "val-tech-plus",
-          category: "E-commerce & design",
-          title: "VAL-TECH Plus",
-          subtitle: "Multi-marques téléphonie",
-          tags: ["Figma", "E-commerce", "Responsive"],
-          description:
-            "Même exigence de clarté que pour Apple Store, étendue à un catalogue multi-marques : focus sur la lisibilité des fiches produits et la conversion.",
-          image: new URL(
-            "../assets/images/val-tech-plus.jpg",
-            import.meta.url
-          ).href,
-          imageAlt: "Aperçu VAL-TECH Plus",
-          liveUrl: "https://www.val-techplus.com/",
-          figmaUrl:
-            "https://www.figma.com/proto/vPa3NBpcVHP0vjCAGClGiK/Val-tech-Plus-2?node-id=2-2&node-type=canvas&t=ZUvRZOUh15bpcYaP-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2",
-        },
-      ],
+      projects: projectsData,
     };
   },
   computed: {
