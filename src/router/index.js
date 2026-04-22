@@ -32,6 +32,11 @@ const router = createRouter({
       name: 'snake-game',
       component: TimeToGame
     },
+    {
+      path: '/projects/:id',
+      name: 'project-details',
+      component: () => import('../views/ProjectDetails.vue')
+    },
   ]
 });
 

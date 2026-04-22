@@ -212,7 +212,7 @@
           class="projects-bento-card group"
         >
           <article
-            class="group flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/95 shadow-inner-highlight transition duration-300 hover:-translate-y-1 hover:border-[#0FEFB4]/45 hover:shadow-soft-xl dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-900/95 dark:via-zinc-950 dark:to-[#0a0a0d] dark:shadow-inner-highlight-dark dark:hover:border-[#0FEFB4]/40 dark:hover:shadow-glow-mint-sm"
+            class="group flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/95 shadow-inner-highlight transition duration-300 hover:-translate-y-1 hover:border-[#0FEFB4]/45 hover:shadow-soft-xl dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-950/75 dark:via-zinc-950 dark:to-emerald-950/20 dark:shadow-inner-highlight-dark dark:hover:border-[#0FEFB4]/40 dark:hover:shadow-glow-mint-sm"
           >
             <div
               class="project-media relative aspect-[16/11] overflow-hidden bg-neutral-900"

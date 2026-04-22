@@ -17,7 +17,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div
-          class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/98 p-8 shadow-soft-lg shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-900/92 dark:via-zinc-950 dark:to-[#0a0a0f] dark:shadow-inner-highlight-dark dark:shadow-glow-mint-sm"
+          class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/98 p-8 shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-950/75 dark:via-zinc-950 dark:to-emerald-950/20 dark:shadow-inner-highlight-dark"
           data-aos="fade-up"
           data-aos-duration="1500"
         >
@@ -90,7 +90,7 @@
           </ul>
         </div>
         <div
-          class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/98 p-8 shadow-soft-lg shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-900/92 dark:via-zinc-950 dark:to-[#0a0a0f] dark:shadow-inner-highlight-dark dark:shadow-glow-mint-sm"
+          class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/98 p-8 shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-950/75 dark:via-zinc-950 dark:to-emerald-950/20 dark:shadow-inner-highlight-dark"
           data-aos="fade-up"
           data-aos-duration="1500"
         >
@@ -203,7 +203,7 @@
           </ul>
         </div>
         <div
-          class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/98 p-8 shadow-soft-lg shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-900/92 dark:via-zinc-950 dark:to-[#0a0a0f] dark:shadow-inner-highlight-dark dark:shadow-glow-mint-sm"
+          class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/98 p-8 shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-950/75 dark:via-zinc-950 dark:to-emerald-950/20 dark:shadow-inner-highlight-dark"
           data-aos="fade-up"
           data-aos-duration="2000"
         >
@@ -289,7 +289,7 @@
           </ul>
         </div>
         <div
-          class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/98 p-8 shadow-soft-lg shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-900/92 dark:via-zinc-950 dark:to-[#0a0a0f] dark:shadow-inner-highlight-dark dark:shadow-glow-mint-sm"
+          class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/98 p-8 shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-950/75 dark:via-zinc-950 dark:to-emerald-950/20 dark:shadow-inner-highlight-dark"
           data-aos="fade-up"
           data-aos-duration="2000"
         >
