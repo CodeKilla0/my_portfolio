@@ -92,24 +92,6 @@
             </div>
 
             <div class="space-y-6 p-6 md:p-8">
-              <ul class="grid gap-3 sm:grid-cols-3">
-                <li
-                  class="rounded-xl border border-zinc-200/80 bg-zinc-50/80 px-3 py-3 text-center text-xs font-medium text-zinc-600 dark:border-white/[0.08] dark:bg-white/[0.04] dark:text-neutral-400"
-                >
-                  Pas de compte requis côté visiteur
-                </li>
-                <li
-                  class="rounded-xl border border-zinc-200/80 bg-zinc-50/80 px-3 py-3 text-center text-xs font-medium text-zinc-600 dark:border-white/[0.08] dark:bg-white/[0.04] dark:text-neutral-400"
-                >
-                  Idéal mobile & desktop
-                </li>
-                <li
-                  class="rounded-xl border border-zinc-200/80 bg-zinc-50/80 px-3 py-3 text-center text-xs font-medium text-zinc-600 dark:border-white/[0.08] dark:bg-white/[0.04] dark:text-neutral-400"
-                >
-                  Brief, lien, capture d’écran
-                </li>
-              </ul>
-
               <div>
                 <label
                   for="wa-prefill"
