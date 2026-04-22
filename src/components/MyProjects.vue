@@ -43,86 +43,133 @@
     </header>
 
     <article
-      v-if="featuredProject"
+      v-if="featuredProjects.length"
       class="projects-featured relative"
+      aria-label="Projets phare"
     >
-      <div class="relative min-h-[72vh] w-full overflow-hidden md:min-h-[78vh]">
-        <img
-          :src="featuredProject.image"
-          :alt="featuredProject.imageAlt"
-          class="absolute inset-0 h-full w-full object-cover"
-          loading="lazy"
-          decoding="async"
-          width="1920"
-          height="1080"
-        />
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-white via-white/92 to-white/35 md:bg-gradient-to-r md:from-white md:via-white/80 md:to-transparent dark:from-[#0a0a0f] dark:via-[#08080a]/92 dark:to-[#08080a]/35 dark:md:from-[#08080a] dark:md:via-[#08080a]/78 dark:md:to-transparent"
-          aria-hidden="true"
-        />
-        <div
-          class="relative z-10 mx-auto flex min-h-[72vh] max-w-screen-xl flex-col justify-end px-4 pb-14 pt-32 md:min-h-[78vh] md:max-w-[42rem] md:justify-center md:pb-0 md:pt-24 lg:max-w-xl"
-        >
-          <span
-            class="mb-3 inline-flex w-fit rounded-full border border-[#0FEFB4]/35 bg-gradient-to-r from-[#0FEFB4]/15 to-white/50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-emerald-800 shadow-soft backdrop-blur-sm dark:from-[#0FEFB4]/20 dark:to-transparent dark:text-[#0FEFB4] dark:shadow-inner-highlight-dark"
-          >
-            Projet phare
-          </span>
-          <h3
-            class="font-display text-3xl font-bold leading-tight text-zinc-900 sm:text-4xl md:text-5xl dark:text-white"
-          >
-            {{ featuredProject.title }}
-          </h3>
-          <p class="mt-2 text-lg text-[#0FEFB4]/90">
-            {{ featuredProject.subtitle }}
-          </p>
-          <ul
-            class="mt-5 flex flex-wrap gap-2"
-            :aria-label="`Stack ${featuredProject.title}`"
-          >
-            <li
-              v-for="tag in featuredProject.tags"
-              :key="tag"
-              class="rounded-md bg-zinc-200/80 px-2.5 py-1 text-xs font-medium text-zinc-800 ring-1 ring-zinc-300 backdrop-blur-sm dark:bg-black/40 dark:text-neutral-300 dark:ring-white/10"
-            >
-              {{ tag }}
-            </li>
-          </ul>
-          <p
-            class="mt-6 text-pretty text-sm leading-relaxed text-zinc-700 md:text-base dark:text-neutral-300"
-          >
-            {{ featuredProject.description }}
-          </p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a
-              v-if="featuredProject.liveUrl"
-              :href="featuredProject.liveUrl"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#5efecd] via-[#0FEFB4] to-[#0bb88a] px-6 py-3 text-sm font-semibold text-neutral-950 shadow-soft-lg shadow-glow-mint-sm transition hover:brightness-105 hover:shadow-glow-mint dark:shadow-glow-mint"
-            >
-              <font-awesome-icon
-                icon="fa-solid fa-arrow-up-right-from-square"
-                class="text-xs"
-              />
-              Ouvrir le site
-            </a>
+      <div class="mx-auto max-w-screen-xl px-4 pt-10 md:pt-14">
+        <div class="flex items-center justify-between gap-4">
+          <div class="min-w-0">
             <span
-              v-else
-              class="inline-flex items-center gap-2 rounded-full border border-dashed border-zinc-300 px-6 py-3 text-sm text-zinc-500 dark:border-white/25 dark:text-neutral-500"
+              class="inline-flex w-fit rounded-full border border-[#0FEFB4]/35 bg-gradient-to-r from-[#0FEFB4]/15 to-white/50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-emerald-800 shadow-soft backdrop-blur-sm dark:from-[#0FEFB4]/20 dark:to-transparent dark:text-[#0FEFB4] dark:shadow-inner-highlight-dark"
             >
-              Démo non publiée
+              Projets phare
             </span>
-            <a
-              v-if="featuredProject.figmaUrl"
-              :href="featuredProject.figmaUrl"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium text-zinc-800 transition hover:border-[#0FEFB4]/50 hover:text-[#0c8f6b] dark:border-white/20 dark:text-white dark:hover:text-[#0FEFB4]"
+            <p class="mt-3 text-sm text-zinc-600 dark:text-neutral-400">
+              Faites défiler horizontalement ou utilisez les flèches.
+            </p>
+          </div>
+
+          <div class="hidden items-center gap-2 sm:flex">
+            <button
+              type="button"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200/80 bg-white/60 text-zinc-800 shadow-soft transition hover:border-[#0FEFB4]/40 hover:text-[#0c8f6b] dark:border-white/[0.12] dark:bg-white/[0.04] dark:text-white dark:hover:text-[#0FEFB4]"
+              aria-label="Projet phare précédent"
+              @click="scrollFeatured(-1)"
             >
-              <font-awesome-icon icon="fa-brands fa-figma" />
-              Figma
-            </a>
+              <font-awesome-icon icon="fa-solid fa-arrow-left" class="text-sm" />
+            </button>
+            <button
+              type="button"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200/80 bg-white/60 text-zinc-800 shadow-soft transition hover:border-[#0FEFB4]/40 hover:text-[#0c8f6b] dark:border-white/[0.12] dark:bg-white/[0.04] dark:text-white dark:hover:text-[#0FEFB4]"
+              aria-label="Projet phare suivant"
+              @click="scrollFeatured(1)"
+            >
+              <font-awesome-icon icon="fa-solid fa-arrow-right" class="text-sm" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        ref="featuredTrack"
+        class="projects-featured-track mt-8 flex w-full snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-2 [-ms-overflow-style:none] [scrollbar-width:none] md:gap-8 md:px-8"
+        role="list"
+      >
+        <div
+          v-for="project in featuredProjects"
+          :key="project.id"
+          class="projects-featured-slide relative min-h-[72vh] w-[min(100%,1080px)] shrink-0 snap-center overflow-hidden rounded-3xl border border-zinc-200/80 bg-neutral-900 shadow-soft-lg dark:border-white/[0.08]"
+          role="listitem"
+        >
+          <img
+            :src="project.image"
+            :alt="project.imageAlt"
+            class="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
+            decoding="async"
+            width="1920"
+            height="1080"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-white via-white/92 to-white/35 md:bg-gradient-to-r md:from-white md:via-white/80 md:to-transparent dark:from-[#0a0a0f] dark:via-[#08080a]/92 dark:to-[#08080a]/35 dark:md:from-[#08080a] dark:md:via-[#08080a]/78 dark:md:to-transparent"
+            aria-hidden="true"
+          />
+          <div
+            class="relative z-10 mx-auto flex min-h-[72vh] max-w-screen-xl flex-col justify-end px-6 pb-14 pt-32 md:max-w-[42rem] md:justify-center md:pb-0 md:pt-24 lg:max-w-xl"
+          >
+            <p
+              v-if="project.category"
+              class="text-xs font-semibold uppercase tracking-[0.35em] text-zinc-600 dark:text-neutral-400"
+            >
+              {{ project.category }}
+            </p>
+            <h3
+              class="mt-3 font-display text-3xl font-bold leading-tight text-zinc-900 sm:text-4xl md:text-5xl dark:text-white"
+            >
+              {{ project.title }}
+            </h3>
+            <p class="mt-2 text-lg text-[#0FEFB4]/90">
+              {{ project.subtitle }}
+            </p>
+            <ul
+              class="mt-5 flex flex-wrap gap-2"
+              :aria-label="`Stack ${project.title}`"
+            >
+              <li
+                v-for="tag in project.tags"
+                :key="tag"
+                class="rounded-md bg-zinc-200/80 px-2.5 py-1 text-xs font-medium text-zinc-800 ring-1 ring-zinc-300 backdrop-blur-sm dark:bg-black/40 dark:text-neutral-300 dark:ring-white/10"
+              >
+                {{ tag }}
+              </li>
+            </ul>
+            <p
+              class="mt-6 text-pretty text-sm leading-relaxed text-zinc-700 md:text-base dark:text-neutral-300"
+            >
+              {{ project.description }}
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a
+                v-if="project.liveUrl"
+                :href="project.liveUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#5efecd] via-[#0FEFB4] to-[#0bb88a] px-6 py-3 text-sm font-semibold text-neutral-950 shadow-soft-lg transition hover:brightness-105 hover:shadow-glow-mint dark:shadow-glow-mint"
+              >
+                <font-awesome-icon
+                  icon="fa-solid fa-arrow-up-right-from-square"
+                  class="text-xs"
+                />
+                Ouvrir le site
+              </a>
+              <span
+                v-else
+                class="inline-flex items-center gap-2 rounded-full border border-dashed border-zinc-300 px-6 py-3 text-sm text-zinc-500 dark:border-white/25 dark:text-neutral-500"
+              >
+                Démo non publiée
+              </span>
+              <a
+                v-if="project.figmaUrl"
+                :href="project.figmaUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium text-zinc-800 transition hover:border-[#0FEFB4]/50 hover:text-[#0c8f6b] dark:border-white/20 dark:text-white dark:hover:text-[#0FEFB4]"
+              >
+                <font-awesome-icon icon="fa-brands fa-figma" />
+                Figma
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -158,7 +205,7 @@
           class="projects-bento-card group"
         >
           <article
-            class="group flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/95 shadow-soft-lg shadow-inner-highlight transition duration-300 hover:-translate-y-1 hover:border-[#0FEFB4]/45 hover:shadow-soft-xl dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-900/95 dark:via-zinc-950 dark:to-[#0a0a0d] dark:shadow-inner-highlight-dark dark:hover:border-[#0FEFB4]/40 dark:hover:shadow-glow-mint-sm"
+            class="group flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/95 shadow-inner-highlight transition duration-300 hover:-translate-y-1 hover:border-[#0FEFB4]/45 hover:shadow-soft-xl dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-900/95 dark:via-zinc-950 dark:to-[#0a0a0d] dark:shadow-inner-highlight-dark dark:hover:border-[#0FEFB4]/40 dark:hover:shadow-glow-mint-sm"
           >
             <div
               class="project-media relative aspect-[16/11] overflow-hidden bg-neutral-900"
@@ -265,6 +312,36 @@ export default {
   data() {
     return {
       projects: [
+        {
+          id: "laundry-saas",
+          category: "Application web SaaS",
+          title: "Laundry Platform — Gestion Pressing",
+          subtitle: "Système multi-tenant de gestion complète",
+          tags: ["Next.js", "Node.js", "PostgreSQL", "Multi-tenant"],
+          description:
+            "Plateforme SaaS de gestion pour pressing : commandes, trésorerie, facturation et suivi techniciens. Architecture multi-tenant avec Next.js, Express et PostgreSQL, pensée pour le marché Afrique de l'Ouest (FCFA).",
+          image: new URL(
+            "../assets/images/laundry-dashboard.png",
+            import.meta.url
+          ).href,
+          imageAlt: "Aperçu du tableau de bord Laundry Platform",
+          liveUrl: null,
+          figmaUrl: null,
+        },
+        {
+          id: "money-center",
+          category: "Application Fintech",
+          title: "Money-Center — Transfert & Retrait",
+          subtitle: "Plateforme multi-opérateurs de transfert d'argent",
+          tags: ["Next.js", "Node.js", "PostgreSQL", "Fintech", "API"],
+          description:
+            "Money-Center centralise les opérations de transfert et retrait d'argent (cash & mobile money) pour un réseau d'agences. Gestion multi-opérateurs (Orange, Wave, MTN…), frais configurables, taux de change système ou API, compensation inter-agences et reporting complet.",
+          image: new URL("../assets/images/money-center.png", import.meta.url)
+            .href,
+          imageAlt: "Aperçu du dashboard Money-Center",
+          liveUrl: null,
+          figmaUrl: null,
+        },
         {
           id: "post-it",
           category: "Application web",
@@ -375,14 +452,27 @@ export default {
     };
   },
   computed: {
-    featuredProject() {
-      return this.projects[0] || null;
+    featuredProjects() {
+      return this.projects.slice(0, 3);
     },
     gridProjects() {
-      return this.projects.slice(1);
+      return this.projects.slice(3);
     },
   },
   methods: {
+    scrollFeatured(direction) {
+      const track = this.$refs.featuredTrack;
+      if (!track || !track.firstElementChild) return;
+
+      const slide = track.firstElementChild;
+      const gap = 32;
+      const slideWidth = slide.getBoundingClientRect().width;
+
+      track.scrollBy({
+        left: direction * (slideWidth + gap),
+        behavior: "smooth",
+      });
+    },
     runEntranceAnimations() {
       this.$nextTick(() => {
         const root = this.$refs.sectionEl;
