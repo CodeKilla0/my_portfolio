@@ -153,6 +153,12 @@
                 />
                 Ouvrir le site
               </a>
+              <span
+                v-else
+                class="inline-flex items-center gap-2 rounded-full border border-dashed border-zinc-300 px-6 py-3 text-sm text-zinc-500 dark:border-white/25 dark:text-neutral-500"
+              >
+                Démo non publiée
+              </span>
               <router-link
                 :to="`/projects/${project.id}`"
                 class="inline-flex items-center gap-2 rounded-full border border-zinc-300 bg-white/55 px-6 py-3 text-sm font-semibold text-zinc-900 shadow-soft transition hover:border-[#0FEFB4]/45 hover:text-[#0c8f6b] dark:border-white/20 dark:bg-white/[0.04] dark:text-white dark:hover:text-[#0FEFB4]"
@@ -160,12 +166,6 @@
                 <font-awesome-icon icon="fa-solid fa-diagram-project" class="text-sm" />
                 Détails
               </router-link>
-              <span
-                v-else
-                class="inline-flex items-center gap-2 rounded-full border border-dashed border-zinc-300 px-6 py-3 text-sm text-zinc-500 dark:border-white/25 dark:text-neutral-500"
-              >
-                Démo non publiée
-              </span>
               <a
                 v-if="project.figmaUrl"
                 :href="project.figmaUrl"
