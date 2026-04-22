@@ -94,43 +94,43 @@ export const projects = [
           name: "Dashboard",
           desc:
             "Vue globale : volumes de transactions, soldes agences, alertes et KPIs en temps réel.",
-          color: "#2563eb",
+          color: "",
         },
         {
           name: "Gestion des transferts",
           desc:
             "Initiation, suivi et validation des transferts cash et mobile money multi-opérateurs.",
-          color: "#534ab7",
+          color: "",
         },
         {
           name: "Gestion des retraits",
           desc:
             "Traitement des retraits cash et mobile, vérification d'identité et validation.",
-          color: "#ba7517",
+          color: "",
         },
         {
           name: "Gestion des agences",
           desc:
             "Paramétrage des points de service, soldes, limites de transaction et agents rattachés.",
-          color: "#0f6e56",
+          color: "",
         },
         {
           name: "Frais & Taux de change",
           desc:
             "Barèmes de frais configurables + intégration API de taux de change en temps réel.",
-          color: "#d85a30",
+          color: "",
         },
         {
           name: "Compensation",
           desc:
             "Calcul et règlement de la compensation inter-agences et inter-opérateurs.",
-          color: "#d4537e",
+          color: "",
         },
         {
           name: "Reporting",
           desc:
             "Rapports journaliers/mensuels, exports, audit trail et réconciliation comptable.",
-          color: "#888780",
+          color: "",
         },
       ],
       highlights: [
