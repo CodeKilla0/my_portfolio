@@ -1,348 +1,206 @@
 <template>
-  <div class="contact relative overflow-hidden bg-zinc-100/95 dark:bg-zinc-950/50" id="contact">
+  <section
+    id="contact"
+    class="relative overflow-hidden border-t border-zinc-200/80 bg-zinc-100/90 py-16 text-zinc-900 dark:border-white/[0.07] dark:bg-zinc-950/55 dark:text-white md:py-24"
+    aria-labelledby="contact-heading"
+  >
     <div
-      class="pointer-events-none absolute inset-0 bg-mesh-light opacity-30 dark:bg-mesh-dark dark:opacity-35"
+      class="pointer-events-none absolute inset-0 bg-mesh-light opacity-35 dark:bg-mesh-dark dark:opacity-40"
       aria-hidden="true"
     />
-    <div class="relative container mx-auto max-w-screen-xl bg-transparent py-12 text-zinc-900 dark:text-white">
-      <!-- Contact Information -->
-      <h2 class="police mb-8 text-center text-5xl font-bold">
-        Contactez moi
-      </h2>
-      <h1
-        class="title mb-8 text-center text-5xl font-black text-zinc-200/80 sm:text-7xl md:text-8xl lg:text-9xl dark:text-slate-300 dark:text-opacity-20"
-      >
-        Contact
-      </h1>
-    </div>
-
-    <div class="relative bg-transparent pb-32">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
-        <!-- Image Section -->
-        <div class="w-full md:w-1/2 flex justify-center">
-          <img
-            src="../assets/images/logo/logo-01-01.png"
-            width="70%"
-            alt="Contact Image"
-            class="rounded-lg shadow-lg rotating-logo"
-          />
-        </div>
-        <!-- Contact Form -->
-        <div
-          class="animated-border m-13 mt-8 w-full rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/95 p-8 shadow-soft-xl shadow-inner-highlight backdrop-blur-sm md:mt-0 md:w-1/2 md:px-12 lg:px-8 dark:border-white/10 dark:bg-gradient-to-br dark:from-zinc-900/90 dark:via-zinc-950 dark:to-[#0a0a0f] dark:shadow-inner-highlight-dark dark:shadow-glow-mint-sm"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          data-aos-easing="linear"
-        >
-          <div class="pb-10">
-            <h3 class="text-3xl font-bold text-zinc-900 dark:text-white">Écrivez-moi !</h3>
-          </div>
-
-          <form @submit.prevent="sendEmail">
-            <div class="mb-3">
-              <input
-                type="text"
-                id="name"
-                v-model="form.name"
-                required
-                placeholder="Votre nom"
-                class="w-full rounded-xl border border-zinc-200/90 bg-white/90 p-3 text-zinc-900 shadow-inner placeholder:text-zinc-400 transition focus:border-[#0FEFB4]/50 focus:outline-none focus:ring-2 focus:ring-[#0FEFB4]/30 dark:border-zinc-600/80 dark:bg-zinc-900/80 dark:text-white dark:placeholder:text-zinc-500 dark:focus:ring-[#0FEFB4]/25"
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="text"
-                id="number"
-                v-model="form.numero"
-                required
-                placeholder="Votre numero"
-                class="w-full rounded-xl border border-zinc-200/90 bg-white/90 p-3 text-zinc-900 shadow-inner placeholder:text-zinc-400 transition focus:border-[#0FEFB4]/50 focus:outline-none focus:ring-2 focus:ring-[#0FEFB4]/30 dark:border-zinc-600/80 dark:bg-zinc-900/80 dark:text-white dark:placeholder:text-zinc-500 dark:focus:ring-[#0FEFB4]/25"
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="email"
-                id="email"
-                v-model="form.email"
-                required
-                placeholder="Votre email"
-                class="w-full rounded-xl border border-zinc-200/90 bg-white/90 p-3 text-zinc-900 shadow-inner placeholder:text-zinc-400 transition focus:border-[#0FEFB4]/50 focus:outline-none focus:ring-2 focus:ring-[#0FEFB4]/30 dark:border-zinc-600/80 dark:bg-zinc-900/80 dark:text-white dark:placeholder:text-zinc-500 dark:focus:ring-[#0FEFB4]/25"
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="text"
-                id="subject"
-                v-model="form.subject"
-                placeholder="Objet"
-                required
-                class="w-full rounded-xl border border-zinc-200/90 bg-white/90 p-3 text-zinc-900 shadow-inner placeholder:text-zinc-400 transition focus:border-[#0FEFB4]/50 focus:outline-none focus:ring-2 focus:ring-[#0FEFB4]/30 dark:border-zinc-600/80 dark:bg-zinc-900/80 dark:text-white dark:placeholder:text-zinc-500 dark:focus:ring-[#0FEFB4]/25"
-              />
-            </div>
-            <div class="mb-3">
-              <textarea
-                id="message"
-                v-model="form.message"
-                placeholder="Message"
-                required
-                class="w-full rounded-xl border border-zinc-200/90 bg-white/90 p-3 text-zinc-900 shadow-inner placeholder:text-zinc-400 transition focus:border-[#0FEFB4]/50 focus:outline-none focus:ring-2 focus:ring-[#0FEFB4]/30 dark:border-zinc-600/80 dark:bg-zinc-900/80 dark:text-white dark:placeholder:text-zinc-500 dark:focus:ring-[#0FEFB4]/25"
-              ></textarea>
-            </div>
-            <div class="mt-3">
-              <button
-                class="relative h-[45px] w-full overflow-hidden rounded-xl bg-gradient-to-r from-zinc-800 to-zinc-900 font-black text-white shadow-soft-lg transition-all before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500 after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500 hover:text-black hover:before:w-2/4 hover:before:bg-emerald-400 hover:after:w-2/4 hover:after:bg-emerald-400 dark:from-black dark:to-zinc-950 dark:shadow-glow-mint-sm"
-                type="submit"
-              >
-                <span class="relative z-10">Envoyer</span>
-              </button>
-            </div>
-            <div v-if="errorMessage">
-              <p class="text-red-500 text-sm">{{ errorMessage }}</p>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <!-- Success Popup -->
     <div
-      v-if="showSuccessPopup"
-      class="fixed inset-0 flex items-center justify-center z-50"
-    >
+      class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#0FEFB4]/40 to-transparent dark:via-[#0FEFB4]/55"
+      aria-hidden="true"
+    />
+
+    <div class="relative mx-auto max-w-screen-xl px-4">
+      <header class="mx-auto max-w-2xl text-center">
+        <p
+          class="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#0FEFB4]"
+        >
+          Contact
+        </p>
+        <h2
+          id="contact-heading"
+          class="font-display text-3xl font-bold sm:text-4xl md:text-5xl"
+        >
+          Échangeons sur WhatsApp
+        </h2>
+        <p
+          class="mt-4 text-base leading-relaxed text-zinc-600 dark:text-neutral-400 md:text-lg"
+        >
+          Le moyen le plus simple pour un brief rapide, un devis ou une question
+          technique : un message direct, sans formulaire ni boîte mail bloquée.
+        </p>
+      </header>
+
       <div
-        class="popup-container bg-green-500 text-white p-6 rounded-lg shadow-lg relative"
+        class="mt-12 grid items-stretch gap-8 lg:grid-cols-12 lg:gap-10"
       >
-        <svg
-          class="w-16 h-16 mx-auto mb-4"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+        <!-- Logo -->
+        <div
+          class="flex flex-col items-center justify-center lg:col-span-5"
+          data-aos="fade-up"
+          data-aos-duration="800"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M5 13l4 4L19 7"
-          />
-        </svg>
-        <p class="text-xl font-bold">{{ successMessage }}</p>
-        <button
-          @click="hideSuccessPopup"
-          class="absolute top-2 right-2 text-white"
-        >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="relative rounded-3xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/95 p-10 shadow-inner-highlight dark:border-white/[0.09] dark:from-zinc-950/80 dark:via-zinc-950 dark:to-emerald-950/25 dark:shadow-inner-highlight-dark md:p-12"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
+            <div
+              class="pointer-events-none absolute -inset-1 rounded-[1.65rem] bg-gradient-to-br from-[#0FEFB4]/25 via-transparent to-emerald-500/10 opacity-70 blur-xl dark:from-[#0FEFB4]/15"
+              aria-hidden="true"
             />
-          </svg>
-        </button>
+            <img
+              src="../assets/images/logo/logo-01-01.png"
+              width="220"
+              height="220"
+              alt="Logo — contact"
+              class="relative z-10 mx-auto max-h-[200px] w-auto object-contain drop-shadow-md md:max-h-[240px]"
+              loading="lazy"
+            />
+            <p
+              class="relative z-10 mt-6 text-center text-sm text-zinc-500 dark:text-neutral-500"
+            >
+              {{ WHATSAPP_DISPLAY }}
+            </p>
+          </div>
+        </div>
+
+        <!-- WhatsApp panel -->
+        <div
+          class="lg:col-span-7"
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aos-delay="80"
+        >
+          <div
+            class="overflow-hidden rounded-3xl border border-zinc-200/90 bg-white/80 shadow-inner-highlight backdrop-blur-md dark:border-white/[0.09] dark:bg-zinc-900/60 dark:shadow-inner-highlight-dark"
+          >
+            <div
+              class="flex items-center gap-3 border-b border-zinc-200/80 bg-gradient-to-r from-[#128C7E] to-[#075E54] px-5 py-4 dark:border-white/[0.08]"
+            >
+              <span
+                class="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-white"
+                aria-hidden="true"
+              >
+                <font-awesome-icon icon="fa-brands fa-whatsapp" class="text-2xl" />
+              </span>
+              <div>
+                <p class="text-sm font-semibold text-white">WhatsApp</p>
+                <p class="text-xs text-white/80">Réponse sous 24 h en général</p>
+              </div>
+            </div>
+
+            <div class="space-y-6 p-6 md:p-8">
+              <ul class="grid gap-3 sm:grid-cols-3">
+                <li
+                  class="rounded-xl border border-zinc-200/80 bg-zinc-50/80 px-3 py-3 text-center text-xs font-medium text-zinc-600 dark:border-white/[0.08] dark:bg-white/[0.04] dark:text-neutral-400"
+                >
+                  Pas de compte requis côté visiteur
+                </li>
+                <li
+                  class="rounded-xl border border-zinc-200/80 bg-zinc-50/80 px-3 py-3 text-center text-xs font-medium text-zinc-600 dark:border-white/[0.08] dark:bg-white/[0.04] dark:text-neutral-400"
+                >
+                  Idéal mobile & desktop
+                </li>
+                <li
+                  class="rounded-xl border border-zinc-200/80 bg-zinc-50/80 px-3 py-3 text-center text-xs font-medium text-zinc-600 dark:border-white/[0.08] dark:bg-white/[0.04] dark:text-neutral-400"
+                >
+                  Brief, lien, capture d’écran
+                </li>
+              </ul>
+
+              <div>
+                <label
+                  for="wa-prefill"
+                  class="mb-2 block text-sm font-semibold text-zinc-800 dark:text-neutral-200"
+                >
+                  Votre message (pré-rempli dans WhatsApp)
+                </label>
+                <textarea
+                  id="wa-prefill"
+                  v-model="draftMessage"
+                  rows="4"
+                  class="w-full resize-y rounded-xl border border-zinc-200/90 bg-white/90 p-4 text-sm text-zinc-900 shadow-inner placeholder:text-zinc-400 transition focus:border-[#0FEFB4]/50 focus:outline-none focus:ring-2 focus:ring-[#0FEFB4]/30 dark:border-white/10 dark:bg-zinc-950/80 dark:text-white dark:placeholder:text-zinc-500 dark:focus:ring-[#0FEFB4]/25"
+                  :placeholder="defaultWhatsAppIntro"
+                />
+              </div>
+
+              <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <a
+                  :href="whatsappLink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-emerald-900/20 transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-zinc-900"
+                >
+                  <font-awesome-icon icon="fa-brands fa-whatsapp" class="text-lg" />
+                  Ouvrir WhatsApp
+                </a>
+                <button
+                  type="button"
+                  class="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-zinc-300 bg-white/80 px-6 py-3.5 text-sm font-semibold text-zinc-800 shadow-soft transition hover:border-[#0FEFB4]/45 hover:text-[#0c8f6b] dark:border-white/15 dark:bg-white/[0.05] dark:text-white dark:hover:text-[#0FEFB4]"
+                  @click="copyNumber"
+                >
+                  <font-awesome-icon icon="fa-solid fa-copy" class="text-sm" />
+                  Copier le numéro
+                </button>
+                <a
+                  :href="CV_PUBLIC_PATH"
+                  download="CV_ismael_aziz_diomande.pdf"
+                  class="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-zinc-300 bg-white/80 px-6 py-3.5 text-sm font-semibold text-zinc-800 shadow-soft transition hover:border-[#0FEFB4]/45 dark:border-white/15 dark:bg-white/[0.05] dark:text-white"
+                >
+                  <font-awesome-icon icon="fa-solid fa-file-pdf" class="text-sm" />
+                  Télécharger le CV
+                </a>
+              </div>
+
+              <p
+                v-if="copyFeedback"
+                class="text-center text-sm font-medium text-emerald-700 dark:text-[#0FEFB4]"
+                role="status"
+              >
+                {{ copyFeedback }}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
-<script>
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import emailjs from "emailjs-com";
+<script setup>
+import { computed, ref } from "vue";
+import {
+  WHATSAPP_E164,
+  WHATSAPP_DISPLAY,
+  CV_PUBLIC_PATH,
+  defaultWhatsAppIntro,
+} from "@/constants/contact";
 
-export default {
-  name: "ContactMe",
-  components: { FontAwesomeIcon },
-  data() {
-    return {
-      form: {
-        name: "",
-        numero: "",
-        email: "",
-        subject: "",
-        message: "",
-      },
-      successMessage: "",
-      errorMessage: "",
-      showSuccessPopup: false,
-    };
-  },
+const draftMessage = ref(defaultWhatsAppIntro);
+const copyFeedback = ref("");
 
-  methods: {
-    sendEmail() {
-      if (
-        !this.form.name ||
-        !this.form.email ||
-        !this.form.subject ||
-        !this.form.message
-      ) {
-        this.errorMessage = "Tous les champs sont obligatoires.";
-        return;
-      }
+const whatsappLink = computed(() => {
+  const text = (draftMessage.value || "").trim() || defaultWhatsAppIntro;
+  return `https://wa.me/${WHATSAPP_E164}?text=${encodeURIComponent(text)}`;
+});
 
-      // regex match for email
-      const emailRegex = /^[a-zA-Z0-9._-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
-      if (!emailRegex.test(this.form.email)) {
-        this.errorMessage = "L'email est invalide.";
-        return;
-      }
-
-      const templateParams = {
-        from_name: this.form.name,
-        from_num: this.form.numero,
-        from_email: this.form.email,
-        subject: this.form.subject,
-        message: this.form.message,
-      };
-
-      emailjs
-        .send(
-          "service_y6laftf",
-          "template_hj19kap",
-          templateParams,
-          "n2ZQdrC6mZ66G78E2"
-        )
-        .then((response) => {
-          this.successMessage = "Votre message a été envoyé avec succès !";
-          this.errorMessage = "";
-          this.showSuccessPopup = true;
-          this.resetForm();
-
-          setTimeout(() => {
-            this.showSuccessPopup = false;
-          }, 5000);
-        })
-        .catch((error) => {
-          this.errorMessage = "Une erreur est survenue. Veuillez réessayer.";
-          this.successMessage = "";
-          setTimeout(() => {
-            this.showSuccessPopup = false;
-          }, 5000);
-        });
-    },
-    resetForm() {
-      this.form.name = "";
-      this.form.email = "";
-      this.form.subject = "";
-      this.form.message = "";
-    },
-    hideSuccessPopup() {
-      this.showSuccessPopup = false;
-    },
-  },
-};
+async function copyNumber() {
+  copyFeedback.value = "";
+  const raw = WHATSAPP_DISPLAY.replace(/\s/g, "");
+  try {
+    await navigator.clipboard.writeText(raw);
+    copyFeedback.value = "Numéro copié.";
+    window.setTimeout(() => {
+      copyFeedback.value = "";
+    }, 2200);
+  } catch {
+    copyFeedback.value = `Copiez : ${WHATSAPP_DISPLAY}`;
+  }
+}
 </script>
 
-<style>
-.popup-container {
-  animation: fadeInOut 5s ease-in-out;
-}
-
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  10% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-}
-
-.rotating-logo {
-  animation: spin 15s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.animated-border {
-  border: 5px solid blue; /* Bordure initiale */
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-  animation: borderAnimation 2s infinite;
-}
-
-@keyframes borderAnimation {
-  0% {
-    border-color: rgb(230, 250, 241);
-    border-width: 2px;
-  }
-  25% {
-    border-color: rgb(123, 241, 186);
-    border-width: 2px;
-  }
-  50% {
-    border-color: rgb(82, 195, 104);
-    border-width: 2px;
-  }
-  75% {
-    border-color: rgb(123, 241, 186);
-    border-width: 2px;
-  }
-  100% {
-    border-color: rgb(230, 250, 241);
-    border-width: 2px;
-  }
-}
-
-.div-lumineuse {
-  width: 300px;
-  height: 200px;
-  padding: 20px;
-  position: relative;
-  background-color: #fff; /* Couleur de fond */
-  border-radius: 10px; /* Bords arrondis */
-  overflow: hidden; /* Assure que le dégradé ne déborde pas */
-  box-shadow: inset 0 0 0 4px transparent; /* Crée une bordure transparente à l'intérieur */
-  animation: color-spin 3s linear infinite; /* Animation de la couleur */
-}
-
-@keyframes color-spin {
-  0% {
-    border-image: linear-gradient(
-      0deg,
-      red,
-      orange,
-      yellow,
-      green,
-      blue,
-      indigo,
-      violet
-    );
-    border-image-slice: 1;
-  }
-  100% {
-    border-image: linear-gradient(
-      360deg,
-      red,
-      orange,
-      yellow,
-      green,
-      blue,
-      indigo,
-      violet
-    );
-    border-image-slice: 1;
-  }
-}
+<style scoped>
+/* Section only — plus d’animation de bordure / rotation agressive */
 </style>

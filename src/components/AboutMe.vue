@@ -25,7 +25,7 @@
             class="relative overflow-hidden rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white to-zinc-100 shadow-soft-xl ring-1 ring-white/60 dark:border-white/10 dark:bg-gradient-to-br dark:from-zinc-900 dark:to-zinc-950 dark:shadow-glow-mint-sm dark:ring-white/10"
           >
             <img
-              src="/aziz.png"
+              src="../assets/images/1769036302835.jpg"
               alt="Portrait d’Ismaël Aziz Diomande"
               class="aspect-[3/4] w-full object-cover object-top"
               loading="lazy"
@@ -61,7 +61,7 @@
               <dt class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-neutral-500">
                 Localisation
               </dt>
-              <dd class="mt-1">Côte d’Ivoire, Abidjan — Adjamé</dd>
+              <dd class="mt-1">Côte d’Ivoire, Abidjan — Cocody, Akouedo</dd>
             </div>
             <div>
               <dt class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-neutral-500">
@@ -87,13 +87,21 @@
               <dt class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-neutral-500">
                 Téléphone
               </dt>
-              <dd class="mt-1">+225 07 13 32 43 97</dd>
+              <dd class="mt-1">
+                <a
+                  href="https://wa.me/2250777099450"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-[#0FEFB4] hover:underline"
+                  >+225 07 77 09 94 50 (WhatsApp)</a
+                >
+              </dd>
             </div>
           </dl>
           <div class="mt-10">
             <a
-              href="/CV_aziz_diomande.pdf"
-              download="CV_Aziz_Diomande.pdf"
+              href="/cv/CV_ismael_aziz_diomande.pdf"
+              download="CV_ismael_aziz_diomande.pdf"
               class="inline-flex items-center justify-center rounded-full border border-[#0FEFB4]/50 bg-[#0FEFB4]/10 px-6 py-3 text-sm font-semibold text-[#0FEFB4] transition hover:bg-[#0FEFB4] hover:text-neutral-950"
             >
               Télécharger le CV

@@ -12,7 +12,7 @@
           @click="menuOpen = false"
         >
           <img
-            src="../assets/images/logo/logo-03.png"
+            src="../assets/images/logo/logo-05.png"
             class="h-10 w-10 rounded-full object-cover ring-2 ring-[#0FEFB4]/30 transition hover:ring-[#0FEFB4]/60 md:h-11 md:w-11"
             alt="Logo Aziz Diomande"
           />
@@ -25,10 +25,10 @@
           class="flex items-center md:order-2 md:space-x-3 rtl:space-x-reverse"
         >
           <a
-            href="/CV_aziz_diomande.pdf"
-            download="CV_Aziz_Diomande.pdf"
+            :href="CV_PUBLIC_PATH"
+            download="CV_ismael_aziz_diomande.pdf"
             class="relative hidden md:block"
-            title="Fichier public/CV_aziz_diomande.pdf"
+            title="Télécharger le CV (PDF)"
           >
             <button
               type="button"
@@ -131,8 +131,8 @@
             </li>
             <li class="md:hidden">
               <a
-                href="/CV_aziz_diomande.pdf"
-                download="CV_Aziz_Diomande.pdf"
+                :href="CV_PUBLIC_PATH"
+                download="CV_ismael_aziz_diomande.pdf"
                 class="block rounded-lg border border-zinc-200 px-4 py-2.5 text-center text-sm text-[#0FEFB4] dark:border-white/10"
                 @click="menuOpen = false"
               >
@@ -153,6 +153,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+import { CV_PUBLIC_PATH } from "@/constants/contact";
 
 const menuOpen = ref(false);
 

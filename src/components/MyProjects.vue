@@ -67,7 +67,8 @@
               aria-label="Projet phare précédent"
               @click="scrollFeatured(-1)"
             >
-              <font-awesome-icon icon="fa-solid fa-arrow-left" class="text-sm" />
+              <font-awesome-icon icon="fa-solid fa-arrow-left" class="text-sm text-white" />
+              <span class="text-white">←</span>
             </button>
             <button
               type="button"
@@ -76,6 +77,7 @@
               @click="scrollFeatured(1)"
             >
               <font-awesome-icon icon="fa-solid fa-arrow-right" class="text-sm" />
+              <span class="text-white">→</span>
             </button>
           </div>
         </div>

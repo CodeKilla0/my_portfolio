@@ -2,11 +2,10 @@
   <NavbarComponent />
   <HeroPage />
   <MyProjects />
-  <MySkills />
   <AboutMe />
+  <MySkills />
   <ServiceSec />
   <IringMe />
-  <!-- <SkillLogos /> -->
   <ContactMe />
   <FooterPage />
 </template>
@@ -23,7 +22,6 @@ import AboutMe from '@/components/AboutMe.vue';
 import ServiceSec from '@/components/ServiceSec.vue';
 import IringMe from '@/components/IringMe.vue';
 import ContactMe from '@/components/ContactMe.vue';
-// import SkillLogos from '@/components/SkillLogos.vue';
 
 export default {
   components: {
@@ -36,7 +34,6 @@ export default {
     ServiceSec,
     IringMe,
     ContactMe,
-    // SkillLogos
   }
 }
 
@@ -44,6 +41,4 @@ export default {
 
 
 <style scoped>
-
-
 </style>

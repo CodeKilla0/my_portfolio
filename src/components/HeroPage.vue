@@ -49,13 +49,13 @@
               <span>projets présentés</span>
             </div>
             <span class="hidden h-4 w-px bg-zinc-300 dark:bg-white/20 sm:block" aria-hidden="true" />
-            <span>Vue.js · Laravel · PHP · Figma</span>
+            <span>Next.js · Node.js · PostgreSQL · Tailwind CSS · Figma</span>
           </div>
 
           <div class="mt-10 flex flex-wrap gap-3">
             <a
               href="#projects"
-              class="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#5efecd] via-[#0FEFB4] to-[#0bb88a] px-7 py-3.5 text-sm font-semibold text-neutral-950 shadow-soft-lg shadow-glow-mint-sm transition hover:brightness-105 hover:shadow-glow-mint focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0FEFB4] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-100 dark:shadow-glow-mint dark:focus-visible:ring-offset-zinc-950"
+              class="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#5efecd] via-[#0FEFB4] to-[#0bb88a] px-7 py-3.5 text-sm font-semibold text-neutral-950 shadow-soft-lg transition hover:brightness-105 hover:shadow-glow-mint focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0FEFB4] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-100 dark:shadow-glow-mint dark:focus-visible:ring-offset-zinc-950"
             >
               Explorer les réalisations
               <svg
@@ -74,10 +74,13 @@
               </svg>
             </a>
             <a
-              href="#contact"
-              class="inline-flex items-center justify-center rounded-full border border-zinc-200/90 bg-white/70 px-7 py-3.5 text-sm font-medium text-zinc-800 shadow-soft backdrop-blur-md transition hover:border-[#0FEFB4]/45 hover:bg-white hover:shadow-soft-lg dark:border-white/12 dark:bg-white/[0.06] dark:text-white dark:shadow-inner-highlight-dark dark:hover:bg-white/[0.1]"
+              :href="whatsappContactUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-200/90 bg-white/70 px-7 py-3.5 text-sm font-medium text-zinc-800 shadow-soft backdrop-blur-md transition hover:border-[#25D366]/50 hover:bg-white hover:shadow-soft-lg dark:border-white/12 dark:bg-white/[0.06] dark:text-white dark:shadow-inner-highlight-dark dark:hover:bg-white/[0.1]"
             >
-              Me contacter
+              <font-awesome-icon icon="fa-brands fa-whatsapp" class="text-lg text-[#25D366]" />
+              WhatsApp
             </a>
           </div>
 
@@ -127,9 +130,14 @@
 </template>
 
 <script>
+import { WHATSAPP_E164, defaultWhatsAppIntro } from "@/constants/contact";
+
 export default {
   data() {
     return {
+      whatsappContactUrl: `https://wa.me/${WHATSAPP_E164}?text=${encodeURIComponent(
+        defaultWhatsAppIntro
+      )}`,
       socials: [
         {
           label: "Facebook",
@@ -138,7 +146,7 @@ export default {
         },
         {
           label: "LinkedIn",
-          href: "https://www.linkedin.com/",
+          href: "https://www.linkedin.com/in/isma%C3%ABl-aziz-diomande-9a4b8a169/",
           icon: "fa-brands fa-linkedin-in",
         },
         {

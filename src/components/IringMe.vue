@@ -12,11 +12,14 @@
           <h1 class="text-5xl font-bold mb-10">
             Je suis disponible pour travailler en free-lance
           </h1>
-          <button
-            class="relative h-[45px] w-40 overflow-hidden bg-zinc-900 font-black text-white transition-all before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500 after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500 hover:text-black hover:before:w-2/4 hover:before:bg-emerald-400 hover:after:w-2/4 hover:after:bg-emerald-400 dark:bg-black"
+          <a
+            href="https://wa.me/2250777099450?text=Bonjour%20Aziz%2C%20je%20vous%20contacte%20depuis%20votre%20portfolio%20concernant%20un%20projet%20freelance."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="relative z-10 inline-flex h-[45px] w-44 items-center justify-center overflow-hidden rounded-lg bg-[#25D366] font-black text-white shadow-lg transition hover:brightness-110"
           >
-            <a href="#contact" class="relative z-10">Ecrivez moi</a>
-          </button>
+            WhatsApp
+          </a>
         </div>
       </div>
     </section>

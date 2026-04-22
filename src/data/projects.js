@@ -139,23 +139,6 @@ export const projects = [
         { label: "Traçabilité", value: "100% des transactions loggées" },
         { label: "Multi-agences", value: "Réseau d'agences centralisé" },
       ],
-      promptButtons: [
-        {
-          label: "Schéma base de données ↗",
-          prompt:
-            "Génère le schéma de base de données PostgreSQL pour Money-Center : tables transactions, agences, opérateurs, frais, taux de change et compensation",
-        },
-        {
-          label: "Fiche portfolio ↗",
-          prompt:
-            "Génère la fiche projet portfolio complète pour Money-Center en format Vue.js",
-        },
-        {
-          label: "Architecture API ↗",
-          prompt:
-            "Propose une architecture API REST pour Money-Center avec les routes principales",
-        },
-      ],
     },
   },
   {

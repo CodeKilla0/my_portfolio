@@ -22,13 +22,16 @@ import {
   faPython,
   faReact,
   faVuejs,
+  faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import {
   faArrowUpRightFromSquare,
   faCode,
+  faCopy,
   faCrop,
   faDiagramProject,
+  faFilePdf,
   faLaptop,
   faMailBulk,
   faMobileButton,
@@ -50,6 +53,7 @@ library.add(
   faPython,
   faFigma,
   faNodeJs,
+  faWhatsapp,
   faAndroid,
   faApple,
   faArrowUpRightFromSquare,
@@ -61,7 +65,9 @@ library.add(
   faMobileButton,
   faLaptop,
   faPenRuler,
-  faDiagramProject
+  faDiagramProject,
+  faCopy,
+  faFilePdf
 );
 
 const app = createApp(App);
