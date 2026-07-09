@@ -90,9 +90,26 @@
           </div>
         </header>
 
+        <!-- Alerte de Confidentialité pour les Études de Cas UX/UI -->
+        <div
+          v-if="project.isUxCaseStudy"
+          class="rounded-3xl border border-amber-500/25 bg-amber-500/5 p-5 text-amber-800 dark:border-amber-400/25 dark:bg-amber-400/5 dark:text-amber-300 backdrop-blur-md"
+        >
+          <div class="flex gap-4 items-center">
+            <div class="shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-amber-500/10 dark:bg-amber-400/10 text-amber-600 dark:text-amber-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+            <div class="text-xs leading-relaxed md:text-sm">
+              <strong class="font-bold">Projet Confidentiel :</strong> Afin de respecter le secret professionnel, les maquettes interactives finales, les captures d'écran réelles et les données nominatives de cette application ont été omises. Cette étude de cas se focalise sur mon <strong>processus de design (UX/UI workflow)</strong>, l'architecture d'information et la construction du <strong>Design System</strong>.
+            </div>
+          </div>
+        </div>
+
         <section v-if="architecture.length" class="space-y-4">
           <h2 class="text-sm font-bold uppercase tracking-[0.35em] text-zinc-500 dark:text-neutral-500">
-            Architecture technique
+            {{ project.isUxCaseStudy ? "Méthodologie & Processus Design" : "Architecture technique" }}
           </h2>
 
           <div class="grid gap-5 md:grid-cols-3">
@@ -101,7 +118,7 @@
               :key="layer.label"
               class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/95 p-6 shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-950/70 dark:via-zinc-950 dark:to-emerald-950/15 dark:shadow-inner-highlight-dark"
             >
-              <p class="text-xs font-extrabold tracking-[0.3em] text-zinc-500 dark:text-neutral-500">
+              <p class="text-xs font-extrabold tracking-[0.3em] text-[#0FEFB4]">
                 {{ layer.label }}
               </p>
               <p class="mt-2 font-display text-xl font-bold text-zinc-900 dark:text-white">
@@ -116,14 +133,16 @@
 
         <section v-if="operations" class="space-y-4">
           <h2 class="text-sm font-bold uppercase tracking-[0.35em] text-zinc-500 dark:text-neutral-500">
-            Opérations — transferts & retraits
+            {{ project.isUxCaseStudy ? "Rôle, Activités & Livrables" : "Opérations — transferts & retraits" }}
           </h2>
 
           <div class="grid gap-5 md:grid-cols-2">
             <article
               class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/95 p-6 shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-950/70 dark:via-zinc-950 dark:to-emerald-950/15 dark:shadow-inner-highlight-dark"
             >
-              <h3 class="font-display text-xl font-bold">Transferts</h3>
+              <h3 class="font-display text-xl font-bold">
+                {{ project.isUxCaseStudy ? "Recherche, Empathie & Analyse" : "Transferts" }}
+              </h3>
               <ul class="mt-4 space-y-2 text-sm text-zinc-700 dark:text-neutral-300">
                 <li v-for="item in operations.transfers" :key="item">→ {{ item }}</li>
               </ul>
@@ -132,7 +151,9 @@
             <article
               class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/95 p-6 shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-950/70 dark:via-zinc-950 dark:to-emerald-950/15 dark:shadow-inner-highlight-dark"
             >
-              <h3 class="font-display text-xl font-bold">Retraits</h3>
+              <h3 class="font-display text-xl font-bold">
+                {{ project.isUxCaseStudy ? "Idéation, Conception UI & Tests" : "Retraits" }}
+              </h3>
               <ul class="mt-4 space-y-2 text-sm text-zinc-700 dark:text-neutral-300">
                 <li v-for="item in operations.withdrawals" :key="item">→ {{ item }}</li>
               </ul>
@@ -142,7 +163,7 @@
 
         <section v-if="modules.length" class="space-y-4">
           <h2 class="text-sm font-bold uppercase tracking-[0.35em] text-zinc-500 dark:text-neutral-500">
-            Modules fonctionnels
+            {{ project.isUxCaseStudy ? "Focus & Valeur Ajoutée UX/UI" : "Modules fonctionnels" }}
           </h2>
 
           <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -164,7 +185,7 @@
 
         <section v-if="highlights.length" class="space-y-4">
           <h2 class="text-sm font-bold uppercase tracking-[0.35em] text-zinc-500 dark:text-neutral-500">
-            Caractéristiques clés
+            {{ project.isUxCaseStudy ? "Synthèse d'Impact & Solidité" : "Caractéristiques clés" }}
           </h2>
 
           <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -173,7 +194,7 @@
               :key="hl.label"
               class="rounded-2xl border border-zinc-200/90 bg-white/60 p-5 shadow-soft backdrop-blur-sm dark:border-white/[0.09] dark:bg-white/[0.03]"
             >
-              <p class="text-xs font-extrabold tracking-[0.25em] text-zinc-500 dark:text-neutral-500">
+              <p class="text-xs font-extrabold tracking-[0.25em] text-[#0FEFB4]">
                 {{ hl.label }}
               </p>
               <p class="mt-2 text-sm font-semibold text-zinc-900 dark:text-white">

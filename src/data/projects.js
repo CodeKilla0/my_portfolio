@@ -1,5 +1,236 @@
 export const projects = [
   {
+    id: "babitransit",
+    category: "Étude de cas UX/UI",
+    title: "BabiTransit — Mobilité Urbaine",
+    subtitle: "Application mobile de transport en commun à Abidjan",
+    tags: ["UX/UI Design", "Figma", "Design System", "Recherche Utilisateur", "Mobile App"],
+    description:
+      "Conception UX/UI complète de BabiTransit, une application mobile visant à simplifier la navigation dans le réseau de transport en commun complexe d'Abidjan (gbakas, wôrô-wôrôs, bus SUTRA, pinasses). En raison de la confidentialité du projet, la démarche présentée détaille le processus de recherche, les architectures d'information et le Design System créé.",
+    image: new URL("../assets/images/babitransit.png", import.meta.url).href,
+    imageAlt: "Aperçu de l'étude de cas BabiTransit",
+    liveUrl: null,
+    figmaUrl: "https://www.figma.com/design/a2doCMTNVc4PQVzVTGMr3M/BabiTransit?node-id=0-1&t=mfpr2bbgF7drjRE5-1",
+    isUxCaseStudy: true,
+    details: {
+      heroBadges: ["Confidentiel", "Design System", "Recherche Utilisateur"],
+      architecture: [
+        {
+          label: "1. EMPATHIE & DÉFINITION",
+          main: "Recherche Utilisateur & Cartographie",
+          detail:
+            "Entretiens avec 15 usagers du transport à Abidjan. Cartographie des parcours de transport informels pour identifier les points de friction majeurs (tarifs fluctuants, absence de trajets définis, temps d'attente imprévisibles).",
+        },
+        {
+          label: "2. IDÉATION & WIREFRAMING",
+          main: "Wireflows & Architecture d'Information",
+          detail:
+            "Conception d'une navigation mobile ultra-rapide à une main (usage en déplacement). Hiérarchisation des fonctionnalités clés : recherche d'itinéraires multi-modes et estimation de coûts.",
+        },
+        {
+          label: "3. UI DESIGN & PROTOTYPE",
+          main: "Haute Fidélité & Système de Design",
+          detail:
+            "Création de la charte visuelle, d'un UI Kit atomique (boutons, cartes de transport, icônes personnalisées). Prototypage de parcours interactifs testés sur le terrain avec des usagers à Cocody et Adjamé.",
+        },
+      ],
+      operations: {
+        transfers: [
+          "Entretiens utilisateurs & personas (daily commuters, étudiants, chauffeurs)",
+          "Cartographie de l'expérience (Customer Journey Maps)",
+          "Architecture d'information & arborescence applicative",
+          "Wireframes basse et moyenne fidélité (Figma)"
+        ],
+        withdrawals: [
+          "Prototypes interactifs haute fidélité (Figma)",
+          "Design System complet (150+ composants réutilisables, variables de couleur)",
+          "Spécifications UI pour l'équipe de développement front-end",
+          "Tests d'utilisabilité sur le terrain et rapports d'itérations"
+        ]
+      },
+      modules: [
+        {
+          name: "Design Inclusif & Lisibilité",
+          desc:
+            "Contraste élevé adapté à la forte luminosité extérieure d'Abidjan. Choix typographiques et iconographiques assurant une lisibilité maximale pour tous les profils d'usagers.",
+          color: "#0FEFB4",
+        },
+        {
+          name: "Représentation du Réseau Informel",
+          desc:
+            "Modélisation visuelle des arrêts et correspondances pour les gbakas et wôrô-wôrôs, traduisant graphiquement des données de transport non structurées.",
+          color: "#0FEFB4",
+        },
+        {
+          name: "Design System Évolutif (UI Kit)",
+          desc:
+            "Mise en place d'un framework UI documenté permettant aux développeurs d'intégrer rapidement les nouvelles vues et fonctionnalités sans dérive esthétique.",
+          color: "#0FEFB4",
+        },
+      ],
+      highlights: [
+        { label: "Rôle", value: "Lead UX/UI Designer" },
+        { label: "Livrables", value: "Prototypes interactifs & UI Kit" },
+        { label: "Impact Dev", value: "-35% de temps sur l'intégration UI" },
+        { label: "Méthode", value: "Design Thinking / Double Diamond" },
+      ],
+    },
+  },
+  {
+    id: "babitrack",
+    category: "Étude de cas UX/UI",
+    title: "BabiTrack — Suivi de Flotte",
+    subtitle: "Plateforme web et mobile de tracking & logistique en temps réel",
+    tags: ["UX/UI Design", "Figma", "Dashboard", "Logistique", "Data Visualization"],
+    description:
+      "Design de l'interface de BabiTrack, un système de géolocalisation et de suivi de flotte en temps réel conçu pour les entreprises de livraison et de transport en Côte d'Ivoire. Le projet met l'accent sur la visualisation de données télémétriques complexes sans surcharge cognitive pour l'opérateur.",
+    image: new URL("../assets/images/babitrack.png", import.meta.url).href,
+    imageAlt: "Aperçu de l'étude de cas BabiTrack",
+    liveUrl: null,
+    figmaUrl: null,
+    isUxCaseStudy: true,
+    details: {
+      heroBadges: ["Confidentiel", "Dashboard", "Data Viz"],
+      architecture: [
+        {
+          label: "1. CONTEXTUAL INQUIRY",
+          main: "Immersion & Analyse d'Activité",
+          detail:
+            "Observation d'une journée de travail de répartiteurs de flotte. Identification du besoin de gestion du stress : les opérateurs ont besoin de voir instantanément le statut d'un véhicule et de gérer les alertes en moins de 3 secondes.",
+        },
+        {
+          label: "2. CONCEPT DESIGN",
+          main: "Dashboard Centralisé & Alerting",
+          detail:
+            "Idéation d'une structure à trois volets : carte centrale dynamique, liste de flotte filtrable par statut et panneau latéral contextuel pour les détails télémétriques.",
+        },
+        {
+          label: "3. DESIGN SYSTEM & TESTS",
+          main: "UI Sombre & Composants Télémétriques",
+          detail:
+            "Conception d'une interface à thème sombre natif (réduction de la fatigue visuelle pour le travail en 24/7). Création de widgets de dataviz (vitesse, carburant, température moteur).",
+        },
+      ],
+      operations: {
+        transfers: [
+          "Analyse de tâches et workflows des gestionnaires de flotte",
+          "Zoning & structures de mise en page pour écrans larges",
+          "Design de flux d'alertes & gestion des notifications prioritaires",
+          "Création de personas opérationnels"
+        ],
+        withdrawals: [
+          "Prototypes haute fidélité interactifs (Figma Web + Mobile)",
+          "Librairie de widgets télémétriques et d'indicateurs de statut",
+          "Guide de styles visuels & spécifications d'animations UI",
+          "Spécifications de handoff détaillées pour les développeurs"
+        ]
+      },
+      modules: [
+        {
+          name: "Visualisation de Données (Dataviz)",
+          desc:
+            "Transformation de flux JSON bruts (coordonnées, vitesse, capteurs) en graphiques et indicateurs visuels clairs et immédiats.",
+          color: "#0FEFB4",
+        },
+        {
+          name: "Système de Notification Graduel",
+          desc:
+            "Code couleur et signalétique UX étudiés pour hiérarchiser les urgences (panne moteur, sortie de zone autorisée, excès de vitesse).",
+          color: "#0FEFB4",
+        },
+        {
+          name: "Handoff Technique Fluide",
+          desc:
+            "Organisation des maquettes Figma avec des tokens CSS clairs, facilitant le travail d'intégration des développeurs Front-end.",
+          color: "#0FEFB4",
+        },
+      ],
+      highlights: [
+        { label: "Rôle", value: "UX/UI Designer & Intégrateur" },
+        { label: "Livrables", value: "Maquettes Figma & Widget Library" },
+        { label: "Réaction Opérateurs", value: "-45% de temps de traitement des pannes" },
+        { label: "Focus", value: "Dataviz & Ergonomie Télématique" },
+      ],
+    },
+  },
+  {
+    id: "jvmr-agricole",
+    category: "Étude de cas UX/UI",
+    title: "JVMR — Secteur Agricole",
+    subtitle: "Plateforme d'accompagnement et de suivi du secteur agricole",
+    tags: ["UX/UI Design", "Figma", "Agriculture", "Mobile App", "Recherche Utilisateur"],
+    description:
+      "Design UX/UI complet de la plateforme JVMR Agricole, une application conçue pour moderniser et optimiser la gestion des exploitations, le suivi des cultures et la prise de décision. Cette étude de cas illustre le travail de recherche terrain auprès des producteurs et la conception d'interfaces lisibles, iconographiques et accessibles adaptées aux contraintes du secteur.",
+    image: new URL("../assets/images/jvmr-agricole.jpg", import.meta.url).href,
+    imageAlt: "Aperçu de l'étude de cas JVMR Agricole",
+    liveUrl: null,
+    figmaUrl: "https://www.figma.com/design/quzHAy9ZV5oHW22L7d9XdX/JVMR?node-id=0-1&t=GSyrZEKEr2g387VO-1",
+    isUxCaseStudy: true,
+    details: {
+      heroBadges: ["UX/UI Design", "Figma", "Agriculture"],
+      architecture: [
+        {
+          label: "1. RECHERCHE & DIAGNOSTIC",
+          main: "Analyse des besoins terrain",
+          detail:
+            "Immersion auprès de coopératives agricoles pour identifier les défis des producteurs : suivi de la météo, gestion des intrants, planification des récoltes et accès direct aux cours du marché.",
+        },
+        {
+          label: "2. WIREFRAMES & ERGONOMIE",
+          main: "Architecture d'Information & Flux",
+          detail:
+            "Zoning et création d'un arborescence simplifiée pour terminaux mobiles à petit écran. Focus sur la lisibilité, l'épuration visuelle et la forte utilisation d'éléments iconographiques explicites.",
+        },
+        {
+          label: "3. UI SYSTEM & PROTOTYPE",
+          main: "Charte Visuelle & Prototypes Figma",
+          detail:
+            "Définition d'un Design System aux tons naturels (vert, terreux), intégrant des icônes sur mesure (tracteur, météo, drone, eau). Prototypage interactif haute fidélité pour validation terrain.",
+        },
+      ],
+      operations: {
+        transfers: [
+          "Recherches utilisateurs & interviews avec les producteurs locaux",
+          "Cartographie des parcours utilisateurs (Customer Journey Maps)",
+          "Zoning d'interface et arborescence de navigation mobile",
+          "Wireframes basse et moyenne fidélité"
+        ],
+        withdrawals: [
+          "Prototypes interactifs haute fidélité sous Figma (Mobile)",
+          "Design System agricole complet (composants réutilisables, styles, palettes)",
+          "Iconographie sur mesure explicite pour les fonctionnalités clés",
+          "Spécifications UI complètes pour l'équipe de développement front-end"
+        ]
+      },
+      modules: [
+        {
+          name: "Iconographie Explicitée",
+          desc:
+            "Jeu d'icônes spécifiques (drone, météo, cultures, eau) facilitant une navigation fluide et intuitive, même pour les utilisateurs peu technophiles.",
+          color: "#10b981",
+        },
+        {
+          name: "Tableaux de Bord Accessibles",
+          desc:
+            "Écrans de suivi clairs (température, humidité, prévisions) simplifiant la prise de décision et le suivi des cultures au quotidien.",
+          color: "#10b981",
+        },
+        {
+          name: "Design System Agricole",
+          desc:
+            "Composants réutilisables et charte graphique cohérente valorisant les codes du secteur agricole, garantissant une intégration harmonieuse.",
+          color: "#10b981",
+        },
+      ],
+      highlights: [
+        { label: "Rôle", value: "Designer UX/UI" },
+        { label: "Livrables", value: "Maquettes Figma & UI Kit" },
+        { label: "Focus", value: "Ergonomie, Accessibilité & Terrain" },
+        { label: "Méthodologie", value: "Design Thinking / Recherche terrain" },
+      ],
+    },
+  },
+  {
     id: "laundry-saas",
     category: "Application web SaaS",
     title: "Laundry Platform — Gestion Pressing",

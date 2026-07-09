@@ -24,7 +24,7 @@
           <p
             class="mb-4 inline-flex rounded-full border border-[#0FEFB4]/30 bg-white/60 px-3 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-emerald-700 shadow-soft backdrop-blur-sm dark:border-[#0FEFB4]/25 dark:bg-white/[0.06] dark:text-[#0FEFB4] dark:shadow-inner-highlight-dark md:text-sm"
           >
-            Développeur full stack · Abidjan
+            Développeur Full Stack & UX/UI Designer · Abidjan
           </p>
           <h1
             class="font-display text-4xl font-bold leading-[1.08] sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-6xl"
@@ -35,17 +35,16 @@
           <p
             class="mt-6 max-w-lg text-base leading-relaxed text-zinc-600 dark:text-neutral-400 md:text-lg"
           >
-            Conception d’applications web, e-commerce et expériences
-            utilisateur. Le cœur de ce portfolio : les
+            Conception d’applications web, de systèmes interactifs et d’expériences utilisateurs. Le cœur de ce portfolio : les
             <strong class="font-semibold text-zinc-900 dark:text-white">projets livrés</strong>,
-            du prototype Figma au déploiement.
+            de la recherche utilisateur au déploiement.
           </p>
 
           <div
             class="mt-4 flex flex-wrap items-center gap-6 text-sm text-zinc-500 dark:text-neutral-500"
           >
             <div class="flex items-baseline gap-2">
-              <span class="font-display text-3xl font-bold text-zinc-900 dark:text-white">7</span>
+              <span class="font-display text-3xl font-bold text-zinc-900 dark:text-white">12</span>
               <span>projets présentés</span>
             </div>
             <span class="hidden h-4 w-px bg-zinc-300 dark:bg-white/20 sm:block" aria-hidden="true" />
@@ -157,9 +156,9 @@ export default {
       ],
       previewCards: [
         {
-          src: new URL("../assets/images/val-tech-apple.jpg", import.meta.url)
+          src: new URL("../assets/images/babitransit.png", import.meta.url)
             .href,
-          alt: "Aperçu VAL-TECH Apple Store",
+          alt: "Aperçu BabiTransit",
           boxClass:
             "left-0 top-0 z-30 w-[58%] aspect-[4/5] rotate-[-6deg] lg:rotate-[-5deg]",
         },

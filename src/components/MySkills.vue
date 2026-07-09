@@ -16,6 +16,86 @@
       </h1>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Expérience NGSER -->
+        <div
+          class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/98 p-8 shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-950/75 dark:via-zinc-950 dark:to-emerald-950/20 dark:shadow-inner-highlight-dark"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <h2 class="text-[#0FEFB4] text-xl font-bold">
+            Depuis Novembre 2024
+          </h2>
+          <h3 class="mb-4 text-2xl font-bold text-zinc-900 dark:text-white">
+            Analyste Programmeur & Designer UX/UI
+          </h3>
+          <p class="mb-6 uppercase text-zinc-600 dark:text-gray-300">Nouvelle Génération de Services (NGSER)</p>
+          <p class="text-justify text-zinc-600 dark:text-gray-400">
+            Conception et développement d'applications métiers (Fintech, Secteur public). Mon rôle lie étroitement le design d'expérience utilisateur (UX/UI) et l'intégration technique :
+          </p>
+          <ul
+            class="mt-5 list-inside space-y-1 text-zinc-600 dark:text-gray-400"
+          >
+            <li class="">
+              <div class="flex font-medium text-zinc-800 dark:text-gray-300">
+                <svg
+                  class="w-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+                  />
+                </svg>
+                Design UX/UI :
+              </div>
+              <ul
+                class="list-inside list-disc space-y-1 pl-5 text-zinc-600 dark:text-gray-400"
+              >
+                <li>
+                  Réalisation de recherches utilisateurs, personas et journey maps pour identifier les frictions.
+                </li>
+                <li>
+                  Conception de maquettes interactives haute fidélité sur Figma (ex: BabiTransit, BabiTrack).
+                </li>
+                <li>
+                  Création et maintenance de Design Systems d'entreprise pour harmoniser le rendu visuel.
+                </li>
+              </ul>
+            </li>
+            <li class="">
+              <div class="flex font-medium text-zinc-800 dark:text-gray-300">
+                <svg
+                  class="w-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+                  />
+                </svg>
+                Développement & Intégration :
+              </div>
+              <ul
+                class="list-inside list-disc space-y-1 pl-5 text-zinc-600 dark:text-gray-400"
+              >
+                <li>
+                  Développement d'interfaces responsives avec VueJS, ReactJS et Tailwind CSS.
+                </li>
+                <li>
+                  Maintenance corrective et évolutive d'applications web (Back-Office et Front-Office E-AGENCE ONECI).
+                </li>
+                <li>
+                  Collaboration étroite avec les développeurs back-end pour l'intégration d'APIs.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
         <div
           class="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white via-white to-zinc-50/98 p-8 shadow-inner-highlight backdrop-blur-sm dark:border-white/[0.09] dark:bg-gradient-to-br dark:from-zinc-950/75 dark:via-zinc-950 dark:to-emerald-950/20 dark:shadow-inner-highlight-dark"
           data-aos="fade-up"
